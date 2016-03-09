@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QCTabbarController.h
 //  QCTabbarController
 //
 //  Created by 程庆春 on 16/3/9.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface QCTabbarController : UITabBarController
 
 @end
-

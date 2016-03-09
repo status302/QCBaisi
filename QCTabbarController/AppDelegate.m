@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "QCTabbarController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc]init];
+    QCTabbarController *tabbar = [[QCTabbarController alloc]init];
+    
+    
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = tabbar;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+-(QCTabbarController *) tabbarController {
+    QCTabbarController *tabbar = [[QCTabbarController alloc] init];
+    
+    
+    
+    return tabbar;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
