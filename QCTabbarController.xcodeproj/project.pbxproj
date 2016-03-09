@@ -15,6 +15,10 @@
 		865CEFB11C9016F200D9C4A1 /* QCTabbarControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFB01C9016F200D9C4A1 /* QCTabbarControllerUITests.m */; };
 		865CEFC01C90182E00D9C4A1 /* QCTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */; };
 		865CEFC31C901BBD00D9C4A1 /* QCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */; };
+		865CEFC61C90487A00D9C4A1 /* QCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */; };
+		865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC81C90488700D9C4A1 /* QCNewViewController.m */; };
+		865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */; };
+		865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,14 @@
 		865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabbarController.m; sourceTree = "<group>"; };
 		865CEFC11C901BBD00D9C4A1 /* QCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabBar.h; sourceTree = "<group>"; };
 		865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabBar.m; sourceTree = "<group>"; };
+		865CEFC41C90487A00D9C4A1 /* QCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCEssenceViewController.h; sourceTree = "<group>"; };
+		865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCEssenceViewController.m; sourceTree = "<group>"; };
+		865CEFC71C90488700D9C4A1 /* QCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNewViewController.h; sourceTree = "<group>"; };
+		865CEFC81C90488700D9C4A1 /* QCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNewViewController.m; sourceTree = "<group>"; };
+		865CEFCA1C90489300D9C4A1 /* QCFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCFriendViewController.h; sourceTree = "<group>"; };
+		865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCFriendViewController.m; sourceTree = "<group>"; };
+		865CEFCD1C90489C00D9C4A1 /* QCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMeViewController.h; sourceTree = "<group>"; };
+		865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,14 @@
 				865CEF8F1C9016F200D9C4A1 /* AppDelegate.m */,
 				865CEFBE1C90182E00D9C4A1 /* QCTabbarController.h */,
 				865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */,
+				865CEFC41C90487A00D9C4A1 /* QCEssenceViewController.h */,
+				865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */,
+				865CEFC71C90488700D9C4A1 /* QCNewViewController.h */,
+				865CEFC81C90488700D9C4A1 /* QCNewViewController.m */,
+				865CEFCA1C90489300D9C4A1 /* QCFriendViewController.h */,
+				865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */,
+				865CEFCD1C90489C00D9C4A1 /* QCMeViewController.h */,
+				865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */,
 				865CEFC11C901BBD00D9C4A1 /* QCTabBar.h */,
 				865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */,
 				865CEF971C9016F200D9C4A1 /* Assets.xcassets */,
@@ -277,7 +297,11 @@
 			files = (
 				865CEF901C9016F200D9C4A1 /* AppDelegate.m in Sources */,
 				865CEFC31C901BBD00D9C4A1 /* QCTabBar.m in Sources */,
+				865CEFC61C90487A00D9C4A1 /* QCEssenceViewController.m in Sources */,
+				865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */,
+				865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
+				865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */,
 				865CEFC01C90182E00D9C4A1 /* QCTabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
