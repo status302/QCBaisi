@@ -12,6 +12,7 @@
 #import "QCFriendViewController.h"
 #import "QCMeViewController.h"
 #import "QCNewViewController.h"
+#import "QCNavigationController.h"
 
 @interface QCTabbarController ()
 
@@ -61,7 +62,7 @@
     // 使用随机的颜色来设置viewController.view 的背景颜色
     viewController.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     // 围着四个控制器添加导航栏
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    QCNavigationController *nav = [[QCNavigationController alloc] initWithRootViewController:viewController];
     
     [self addChildViewController:nav];
 }

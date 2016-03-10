@@ -21,6 +21,7 @@
 		865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFF81C913D9300D9C4A1 /* QCTabBar.m */; };
 		865CF0021C913D9300D9C4A1 /* UIView+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */; };
 		865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */; };
+		865CF00B1C91493D00D9C4A1 /* QCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QC.m"; sourceTree = "<group>"; };
 		865CF0061C91401D00D9C4A1 /* UIBarButtonItem+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QC.h"; sourceTree = "<group>"; };
 		865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QC.m"; sourceTree = "<group>"; };
+		865CF0091C91493D00D9C4A1 /* QCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNavigationController.h; sourceTree = "<group>"; };
+		865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +321,8 @@
 			children = (
 				865CEFF31C913D9300D9C4A1 /* QCTabbarController.h */,
 				865CEFF41C913D9300D9C4A1 /* QCTabbarController.m */,
+				865CF0091C91493D00D9C4A1 /* QCNavigationController.h */,
+				865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				865CEFFC1C913D9300D9C4A1 /* QCFriendViewController.m in Sources */,
+				865CF00B1C91493D00D9C4A1 /* QCNavigationController.m in Sources */,
 				865CEFFE1C913D9300D9C4A1 /* QCNewViewController.m in Sources */,
 				865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */,
 				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,

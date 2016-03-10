@@ -26,11 +26,18 @@
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         
+        
+        [publishButton addTarget:self action:@selector(handlePublish) forControlEvents:UIControlEventTouchUpInside];
+        
         self.publishButton = publishButton;
         [self addSubview:publishButton];
     }
     
     return self;
+}
+
+- (void) handlePublish {
+    NSLog(@"pushlish click");
 }
 
 - (void)layoutSubviews {
