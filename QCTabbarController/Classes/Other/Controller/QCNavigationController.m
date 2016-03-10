@@ -37,9 +37,9 @@
 //    UINavigationBar *bar = [UINavigationBar appearance];
 //    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
+
 /**
  *  可以在这个方法里拦截所有进来的控制器
- *
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
 

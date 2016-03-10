@@ -36,8 +36,9 @@
     
     QCEssenceViewController *essenceVC = [[QCEssenceViewController alloc] init];
     QCNewViewController *newVC = [[QCNewViewController alloc] init];
-    QCMeViewController *meVC = [[QCMeViewController alloc] init];
     QCFriendViewController *friendVC = [[QCFriendViewController alloc] init];
+    QCMeViewController *meVC = [[QCMeViewController alloc] init];
+
     
     [self addChildVCWithVC:essenceVC Title:@"精华" image:[UIImage imageNamed:@"tabBar_essence_icon"] selectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
     [self addChildVCWithVC:newVC Title:@"最新" image:[UIImage imageNamed:@"tabBar_new_icon"] selectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"]];
@@ -60,7 +61,8 @@
     [viewController.tabBarItem setImage:image];
     [viewController.tabBarItem setSelectedImage:selectedImage];
     // 使用随机的颜色来设置viewController.view 的背景颜色
-    viewController.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+//    viewController.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+
     // 围着四个控制器添加导航栏
     QCNavigationController *nav = [[QCNavigationController alloc] initWithRootViewController:viewController];
     

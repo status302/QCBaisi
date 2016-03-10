@@ -21,6 +21,8 @@
     UIBarButtonItem *item2 = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highlightedImage:@"mine-setting-icon-click" target:self action:@selector(mineSettingClick)];
     
     self.navigationItem.rightBarButtonItems = @[item2, item1];
+    
+    self.view.backgroundColor = QCRGBColor(10, 201, 20);
 }
 - (void) mineMoonCick {
     NSLog(@"mineMoonClick");

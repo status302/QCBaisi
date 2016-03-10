@@ -22,6 +22,7 @@
 		865CF0021C913D9300D9C4A1 /* UIView+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */; };
 		865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */; };
 		865CF00B1C91493D00D9C4A1 /* QCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */; };
+		865CF0101C9161BB00D9C4A1 /* QCFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865CF00F1C9161BB00D9C4A1 /* QCFriendViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QC.m"; sourceTree = "<group>"; };
 		865CF0091C91493D00D9C4A1 /* QCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNavigationController.h; sourceTree = "<group>"; };
 		865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationController.m; sourceTree = "<group>"; };
+		865CF00F1C9161BB00D9C4A1 /* QCFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCFriendViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				865CEFDF1C913D9300D9C4A1 /* QCFriendViewController.h */,
 				865CEFE01C913D9300D9C4A1 /* QCFriendViewController.m */,
+				865CF00F1C9161BB00D9C4A1 /* QCFriendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865CF0101C9161BB00D9C4A1 /* QCFriendViewController.xib in Resources */,
 				865CEF9B1C9016F200D9C4A1 /* LaunchScreen.storyboard in Resources */,
 				865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */,
 			);
