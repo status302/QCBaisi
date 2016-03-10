@@ -55,13 +55,15 @@
 }
 
 - (void) addChildVCWithVC:(UIViewController *)viewController Title:(NSString *)title image:(UIImage *)image selectedImage: (UIImage *)selectedImage {
-    viewController.title = title;
+    viewController.tabBarItem.title = title;
     [viewController.tabBarItem setImage:image];
     [viewController.tabBarItem setSelectedImage:selectedImage];
     // 使用随机的颜色来设置viewController.view 的背景颜色
     viewController.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    // 围着四个控制器添加导航栏
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    [self addChildViewController:viewController];
+    [self addChildViewController:nav];
 }
 
 

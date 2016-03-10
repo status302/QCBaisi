@@ -16,12 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 添加左按钮
+    UIButton *leftItemView = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftItemView setBackgroundImage:[UIImage imageNamed:@"MainTagSubIcon"] forState:UIControlStateNormal];
+    [leftItemView setBackgroundImage:[UIImage imageNamed:@"MainTagSubIconClick"] forState:UIControlStateHighlighted];
+    CGRect f = leftItemView.frame;
+    f.size = leftItemView.currentBackgroundImage.size;
+    leftItemView.frame = f;
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:leftItemView];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

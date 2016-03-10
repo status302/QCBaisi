@@ -19,6 +19,7 @@
 		865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC81C90488700D9C4A1 /* QCNewViewController.m */; };
 		865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */; };
 		865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */; };
+		865CEFD41C9133B200D9C4A1 /* UIView+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFD31C9133B200D9C4A1 /* UIView+QC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,9 @@
 		865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCFriendViewController.m; sourceTree = "<group>"; };
 		865CEFCD1C90489C00D9C4A1 /* QCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMeViewController.h; sourceTree = "<group>"; };
 		865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMeViewController.m; sourceTree = "<group>"; };
+		865CEFD21C9133B200D9C4A1 /* UIView+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QC.h"; sourceTree = "<group>"; };
+		865CEFD31C9133B200D9C4A1 /* UIView+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QC.m"; sourceTree = "<group>"; };
+		865CEFD51C91371D00D9C4A1 /* QCTabbarController.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QCTabbarController.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,9 @@
 				865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */,
 				865CEFC11C901BBD00D9C4A1 /* QCTabBar.h */,
 				865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */,
+				865CEFD21C9133B200D9C4A1 /* UIView+QC.h */,
+				865CEFD31C9133B200D9C4A1 /* UIView+QC.m */,
+				865CEFD51C91371D00D9C4A1 /* QCTabbarController.pch */,
 				865CEF971C9016F200D9C4A1 /* Assets.xcassets */,
 				865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */,
 				865CEF9C1C9016F200D9C4A1 /* Info.plist */,
@@ -299,6 +306,7 @@
 				865CEFC31C901BBD00D9C4A1 /* QCTabBar.m in Sources */,
 				865CEFC61C90487A00D9C4A1 /* QCEssenceViewController.m in Sources */,
 				865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */,
+				865CEFD41C9133B200D9C4A1 /* UIView+QC.m in Sources */,
 				865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
 				865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */,
@@ -433,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QCTabbarController/QCTabbarController.pch;
 				INFOPLIST_FILE = QCTabbarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuncheng.QCTabbarController;
@@ -444,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QCTabbarController/QCTabbarController.pch;
 				INFOPLIST_FILE = QCTabbarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuncheng.QCTabbarController;
@@ -518,6 +528,7 @@
 				865CEFB71C9016F200D9C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		865CEFB81C9016F200D9C4A1 /* Build configuration list for PBXNativeTarget "QCTabbarControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +537,7 @@
 				865CEFBA1C9016F200D9C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		865CEFBB1C9016F200D9C4A1 /* Build configuration list for PBXNativeTarget "QCTabbarControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +546,7 @@
 				865CEFBD1C9016F200D9C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

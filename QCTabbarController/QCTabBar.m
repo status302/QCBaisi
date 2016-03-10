@@ -37,8 +37,8 @@
     [super layoutSubviews];
     
     // w：当前tabbar的五分之一宽度；h：当前tabbar的高度；y：当前tabbar的高度；i：
-    CGFloat w = self.frame.size.width/5.0;
-    CGFloat h = self.frame.size.height;
+    CGFloat w = self.width/5.0;
+    CGFloat h = self.height;
     CGFloat y = 0.0;
     NSInteger i = 0;
     //    设置发布按钮的frame
