@@ -14,17 +14,28 @@
 
 @implementation QCNavigationController
 
+/**
+ *  该方法表示当该类第一次被调用的时候调用该方法。而且之调用一次
+ */
++ (void)initialize {
+    // 这里说明一下，bar background只被调用了一次。没有只要重复调用。
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
     // 下面设置导航栏背景色的方式是不准确的，没有效果
 //    self.navigationBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]];
-    
+
     // 正确的设置导航栏背景色的方式
-    UINavigationBar *bar = [UINavigationBar appearance];
-//    bar.backgroundColor = [UIColor redColor];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    // 方法一：
+//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"MainTagSubIconClick"] forBarMetrics:UIBarMetricsDefault];
+    // 方法二：
+//    UINavigationBar *bar = [UINavigationBar appearance];
+//    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 /**
  *  可以在这个方法里拦截所有进来的控制器
