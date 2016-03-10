@@ -11,6 +11,7 @@
 
 
 #import "UIView+QC.h"
+#import "UIBarButtonItem+QC.h"
 
 
 #endif /* QCTabbarController_pch */

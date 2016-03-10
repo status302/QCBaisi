@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		865CEF8D1C9016F200D9C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEF8C1C9016F200D9C4A1 /* main.m */; };
-		865CEF901C9016F200D9C4A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEF8F1C9016F200D9C4A1 /* AppDelegate.m */; };
 		865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF971C9016F200D9C4A1 /* Assets.xcassets */; };
 		865CEF9B1C9016F200D9C4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */; };
 		865CEFA61C9016F200D9C4A1 /* QCTabbarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFA51C9016F200D9C4A1 /* QCTabbarControllerTests.m */; };
 		865CEFB11C9016F200D9C4A1 /* QCTabbarControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFB01C9016F200D9C4A1 /* QCTabbarControllerUITests.m */; };
-		865CEFC01C90182E00D9C4A1 /* QCTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */; };
-		865CEFC31C901BBD00D9C4A1 /* QCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */; };
-		865CEFC61C90487A00D9C4A1 /* QCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */; };
-		865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFC81C90488700D9C4A1 /* QCNewViewController.m */; };
-		865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */; };
-		865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */; };
-		865CEFD41C9133B200D9C4A1 /* UIView+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFD31C9133B200D9C4A1 /* UIView+QC.m */; };
+		865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFDA1C913D9300D9C4A1 /* QCEssenceViewController.m */; };
+		865CEFFC1C913D9300D9C4A1 /* QCFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFE01C913D9300D9C4A1 /* QCFriendViewController.m */; };
+		865CEFFD1C913D9300D9C4A1 /* QCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFE61C913D9300D9C4A1 /* QCMeViewController.m */; };
+		865CEFFE1C913D9300D9C4A1 /* QCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFEC1C913D9300D9C4A1 /* QCNewViewController.m */; };
+		865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFF11C913D9300D9C4A1 /* AppDelegate.m */; };
+		865CF0001C913D9300D9C4A1 /* QCTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFF41C913D9300D9C4A1 /* QCTabbarController.m */; };
+		865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFF81C913D9300D9C4A1 /* QCTabBar.m */; };
+		865CF0021C913D9300D9C4A1 /* UIView+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */; };
+		865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,6 @@
 /* Begin PBXFileReference section */
 		865CEF881C9016F200D9C4A1 /* QCTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEF8C1C9016F200D9C4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		865CEF8E1C9016F200D9C4A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		865CEF8F1C9016F200D9C4A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		865CEF971C9016F200D9C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865CEF9A1C9016F200D9C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		865CEF9C1C9016F200D9C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,21 +52,25 @@
 		865CEFAC1C9016F200D9C4A1 /* QCTabbarControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCTabbarControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEFB01C9016F200D9C4A1 /* QCTabbarControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCTabbarControllerUITests.m; sourceTree = "<group>"; };
 		865CEFB21C9016F200D9C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		865CEFBE1C90182E00D9C4A1 /* QCTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabbarController.h; sourceTree = "<group>"; };
-		865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabbarController.m; sourceTree = "<group>"; };
-		865CEFC11C901BBD00D9C4A1 /* QCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabBar.h; sourceTree = "<group>"; };
-		865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabBar.m; sourceTree = "<group>"; };
-		865CEFC41C90487A00D9C4A1 /* QCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCEssenceViewController.h; sourceTree = "<group>"; };
-		865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCEssenceViewController.m; sourceTree = "<group>"; };
-		865CEFC71C90488700D9C4A1 /* QCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNewViewController.h; sourceTree = "<group>"; };
-		865CEFC81C90488700D9C4A1 /* QCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNewViewController.m; sourceTree = "<group>"; };
-		865CEFCA1C90489300D9C4A1 /* QCFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCFriendViewController.h; sourceTree = "<group>"; };
-		865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCFriendViewController.m; sourceTree = "<group>"; };
-		865CEFCD1C90489C00D9C4A1 /* QCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMeViewController.h; sourceTree = "<group>"; };
-		865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMeViewController.m; sourceTree = "<group>"; };
-		865CEFD21C9133B200D9C4A1 /* UIView+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QC.h"; sourceTree = "<group>"; };
-		865CEFD31C9133B200D9C4A1 /* UIView+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QC.m"; sourceTree = "<group>"; };
 		865CEFD51C91371D00D9C4A1 /* QCTabbarController.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QCTabbarController.pch; sourceTree = "<group>"; };
+		865CEFD91C913D9300D9C4A1 /* QCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCEssenceViewController.h; sourceTree = "<group>"; };
+		865CEFDA1C913D9300D9C4A1 /* QCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCEssenceViewController.m; sourceTree = "<group>"; };
+		865CEFDF1C913D9300D9C4A1 /* QCFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCFriendViewController.h; sourceTree = "<group>"; };
+		865CEFE01C913D9300D9C4A1 /* QCFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCFriendViewController.m; sourceTree = "<group>"; };
+		865CEFE51C913D9300D9C4A1 /* QCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMeViewController.h; sourceTree = "<group>"; };
+		865CEFE61C913D9300D9C4A1 /* QCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMeViewController.m; sourceTree = "<group>"; };
+		865CEFEB1C913D9300D9C4A1 /* QCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNewViewController.h; sourceTree = "<group>"; };
+		865CEFEC1C913D9300D9C4A1 /* QCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNewViewController.m; sourceTree = "<group>"; };
+		865CEFF01C913D9300D9C4A1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		865CEFF11C913D9300D9C4A1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		865CEFF31C913D9300D9C4A1 /* QCTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabbarController.h; sourceTree = "<group>"; };
+		865CEFF41C913D9300D9C4A1 /* QCTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabbarController.m; sourceTree = "<group>"; };
+		865CEFF71C913D9300D9C4A1 /* QCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabBar.h; sourceTree = "<group>"; };
+		865CEFF81C913D9300D9C4A1 /* QCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabBar.m; sourceTree = "<group>"; };
+		865CEFF91C913D9300D9C4A1 /* UIView+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QC.h"; sourceTree = "<group>"; };
+		865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QC.m"; sourceTree = "<group>"; };
+		865CF0061C91401D00D9C4A1 /* UIBarButtonItem+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QC.h"; sourceTree = "<group>"; };
+		865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,22 +121,7 @@
 		865CEF8A1C9016F200D9C4A1 /* QCTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				865CEF8E1C9016F200D9C4A1 /* AppDelegate.h */,
-				865CEF8F1C9016F200D9C4A1 /* AppDelegate.m */,
-				865CEFBE1C90182E00D9C4A1 /* QCTabbarController.h */,
-				865CEFBF1C90182E00D9C4A1 /* QCTabbarController.m */,
-				865CEFC41C90487A00D9C4A1 /* QCEssenceViewController.h */,
-				865CEFC51C90487A00D9C4A1 /* QCEssenceViewController.m */,
-				865CEFC71C90488700D9C4A1 /* QCNewViewController.h */,
-				865CEFC81C90488700D9C4A1 /* QCNewViewController.m */,
-				865CEFCA1C90489300D9C4A1 /* QCFriendViewController.h */,
-				865CEFCB1C90489300D9C4A1 /* QCFriendViewController.m */,
-				865CEFCD1C90489C00D9C4A1 /* QCMeViewController.h */,
-				865CEFCE1C90489C00D9C4A1 /* QCMeViewController.m */,
-				865CEFC11C901BBD00D9C4A1 /* QCTabBar.h */,
-				865CEFC21C901BBD00D9C4A1 /* QCTabBar.m */,
-				865CEFD21C9133B200D9C4A1 /* UIView+QC.h */,
-				865CEFD31C9133B200D9C4A1 /* UIView+QC.m */,
+				865CEFD61C913D9300D9C4A1 /* Classes */,
 				865CEFD51C91371D00D9C4A1 /* QCTabbarController.pch */,
 				865CEF971C9016F200D9C4A1 /* Assets.xcassets */,
 				865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */,
@@ -167,6 +155,191 @@
 				865CEFB21C9016F200D9C4A1 /* Info.plist */,
 			);
 			path = QCTabbarControllerUITests;
+			sourceTree = "<group>";
+		};
+		865CEFD61C913D9300D9C4A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFD71C913D9300D9C4A1 /* Essence */,
+				865CEFE91C913D9300D9C4A1 /* New */,
+				865CEFDD1C913D9300D9C4A1 /* FriendTrends */,
+				865CEFE31C913D9300D9C4A1 /* Me */,
+				865CEFEF1C913D9300D9C4A1 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		865CEFD71C913D9300D9C4A1 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFD81C913D9300D9C4A1 /* Controller */,
+				865CEFDB1C913D9300D9C4A1 /* modal */,
+				865CEFDC1C913D9300D9C4A1 /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		865CEFD81C913D9300D9C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFD91C913D9300D9C4A1 /* QCEssenceViewController.h */,
+				865CEFDA1C913D9300D9C4A1 /* QCEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		865CEFDB1C913D9300D9C4A1 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		865CEFDC1C913D9300D9C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		865CEFDD1C913D9300D9C4A1 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFDE1C913D9300D9C4A1 /* Controller */,
+				865CEFE11C913D9300D9C4A1 /* modal */,
+				865CEFE21C913D9300D9C4A1 /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		865CEFDE1C913D9300D9C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFDF1C913D9300D9C4A1 /* QCFriendViewController.h */,
+				865CEFE01C913D9300D9C4A1 /* QCFriendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		865CEFE11C913D9300D9C4A1 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		865CEFE21C913D9300D9C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		865CEFE31C913D9300D9C4A1 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFE41C913D9300D9C4A1 /* Controller */,
+				865CEFE71C913D9300D9C4A1 /* modal */,
+				865CEFE81C913D9300D9C4A1 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		865CEFE41C913D9300D9C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFE51C913D9300D9C4A1 /* QCMeViewController.h */,
+				865CEFE61C913D9300D9C4A1 /* QCMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		865CEFE71C913D9300D9C4A1 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		865CEFE81C913D9300D9C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		865CEFE91C913D9300D9C4A1 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFEA1C913D9300D9C4A1 /* Controller */,
+				865CEFED1C913D9300D9C4A1 /* modal */,
+				865CEFEE1C913D9300D9C4A1 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		865CEFEA1C913D9300D9C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFEB1C913D9300D9C4A1 /* QCNewViewController.h */,
+				865CEFEC1C913D9300D9C4A1 /* QCNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		865CEFED1C913D9300D9C4A1 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		865CEFEE1C913D9300D9C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		865CEFEF1C913D9300D9C4A1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFF01C913D9300D9C4A1 /* AppDelegate.h */,
+				865CEFF11C913D9300D9C4A1 /* AppDelegate.m */,
+				865CEFF21C913D9300D9C4A1 /* Controller */,
+				865CEFF51C913D9300D9C4A1 /* modal */,
+				865CEFF61C913D9300D9C4A1 /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		865CEFF21C913D9300D9C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFF31C913D9300D9C4A1 /* QCTabbarController.h */,
+				865CEFF41C913D9300D9C4A1 /* QCTabbarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		865CEFF51C913D9300D9C4A1 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modal;
+			sourceTree = "<group>";
+		};
+		865CEFF61C913D9300D9C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				865CEFF71C913D9300D9C4A1 /* QCTabBar.h */,
+				865CEFF81C913D9300D9C4A1 /* QCTabBar.m */,
+				865CEFF91C913D9300D9C4A1 /* UIView+QC.h */,
+				865CEFFA1C913D9300D9C4A1 /* UIView+QC.m */,
+				865CF0061C91401D00D9C4A1 /* UIBarButtonItem+QC.h */,
+				865CF0071C91401D00D9C4A1 /* UIBarButtonItem+QC.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,15 +475,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865CEF901C9016F200D9C4A1 /* AppDelegate.m in Sources */,
-				865CEFC31C901BBD00D9C4A1 /* QCTabBar.m in Sources */,
-				865CEFC61C90487A00D9C4A1 /* QCEssenceViewController.m in Sources */,
-				865CEFC91C90488700D9C4A1 /* QCNewViewController.m in Sources */,
-				865CEFD41C9133B200D9C4A1 /* UIView+QC.m in Sources */,
-				865CEFCF1C90489C00D9C4A1 /* QCMeViewController.m in Sources */,
+				865CEFFC1C913D9300D9C4A1 /* QCFriendViewController.m in Sources */,
+				865CEFFE1C913D9300D9C4A1 /* QCNewViewController.m in Sources */,
+				865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */,
+				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
-				865CEFCC1C90489300D9C4A1 /* QCFriendViewController.m in Sources */,
-				865CEFC01C90182E00D9C4A1 /* QCTabbarController.m in Sources */,
+				865CEFFD1C913D9300D9C4A1 /* QCMeViewController.m in Sources */,
+				865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */,
+				865CF0021C913D9300D9C4A1 /* UIView+QC.m in Sources */,
+				865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */,
+				865CF0001C913D9300D9C4A1 /* QCTabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
