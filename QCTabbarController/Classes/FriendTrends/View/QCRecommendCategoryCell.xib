@@ -22,11 +22,21 @@
                             <constraint firstAttribute="width" constant="5" id="Fi1-D3-KJF"/>
                         </constraints>
                     </view>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-4A-6SQ">
+                        <rect key="frame" x="8" y="34.5" width="304" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="WCm-f1-5H2"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="ehD-4A-6SQ" secondAttribute="bottom" id="1cA-C5-inp"/>
                     <constraint firstItem="xeF-LL-6xT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="U9Q-0C-Wjy"/>
                     <constraint firstItem="xeF-LL-6xT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Zhq-dl-7Ax"/>
+                    <constraint firstItem="ehD-4A-6SQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="nQu-tG-nIs"/>
                     <constraint firstAttribute="bottomMargin" secondItem="xeF-LL-6xT" secondAttribute="bottom" id="wXn-Vx-cO5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ehD-4A-6SQ" secondAttribute="trailing" id="xiD-tI-9ty"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

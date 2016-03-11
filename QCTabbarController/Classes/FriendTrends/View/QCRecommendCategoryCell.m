@@ -19,6 +19,7 @@
 
 - (void)awakeFromNib {
     self.categoryIndicatorView.backgroundColor = QCRGBColor(219, 21, 26);
+    
 }
 
 -(void)setCategory:(QCRecommendCategory *)category {
@@ -42,5 +43,10 @@
     
     self.textLabel.textColor = selected ? self.categoryIndicatorView.backgroundColor : QCRGBColor(77, 77, 77);
     
+}
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.textLabel.y = 15;
+    self.textLabel.height = self.height - self.textLabel.y * 2;
 }
 @end

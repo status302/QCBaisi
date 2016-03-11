@@ -12,11 +12,13 @@
 #import "QCRecommendCategory.h"
 #import "QCRecommendCategoryCell.h"
 #import "QCRecommendUserCell.h"
+#import "QCRecommendUser.h"
 #import "MJExtension.h"
 
 @interface QCRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 // 左边的数据
 @property (strong, nonatomic) NSMutableArray *categories;
+@property (strong, nonatomic) NSMutableArray* users;
 @property (weak, nonatomic) IBOutlet UITableView *userView;
 
 @end
@@ -35,7 +37,7 @@ static NSString * const QCUserCell = @"userCell";
     //初始化view
     [self setupView];
     
-    _categories = [NSMutableArray array];
+//    _categories = [NSMutableArray array];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
@@ -59,11 +61,12 @@ static NSString * const QCUserCell = @"userCell";
         for (NSDictionary *dict in responseObject[@"list"]) {
             QCRecommendCategory *category = [[QCRecommendCategory alloc]init];
             category.name = dict[@"name"];
-           
+     
             // 调试所用
 //            NSLog(@"category name is :%@",category.name);
-            category.id = (NSInteger)dict[@"id"];
-            category.count = (NSInteger)dict[@"count"];
+            category.id = (int)dict[@"id"];
+            NSLog(@"id 为：%d", category.id);
+            category.count = (int)dict[@"count"];
             
             // 调试所用
 //            NSLog(@"the count is %zd", category.count);
@@ -71,7 +74,7 @@ static NSString * const QCUserCell = @"userCell";
             [_categories addObject:category];
             // 这行代码在这里是没有执行的显示的结果为 ——categories的count一直为0; 而想要执行这行代码必须在前面初始化——categories。
 
-        }*/
+        } */
         // 调试的时候用的，现在注释掉
 //        NSLog(@"categories count is : %zd", _categories.count);
         /**
@@ -109,6 +112,8 @@ static NSString * const QCUserCell = @"userCell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.categoryView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.userView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    
+    self.userView.rowHeight = 70;
 }
 
 #pragma mark - UITableView Datasource
@@ -116,7 +121,7 @@ static NSString * const QCUserCell = @"userCell";
     if (tableView == _categoryView) {
         return self.categories.count;
     } else {
-        return 0;
+        return self.users.count;
     }
 }
 
@@ -131,32 +136,45 @@ static NSString * const QCUserCell = @"userCell";
         return cell;
     } else {
         QCRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:QCUserCell];
-        
+        cell.user = self.users[indexPath.row];
         return cell;
     }
 }
 
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    QCRecommendCategory *c = self.categories[indexPath.row];
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(c.id);
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    if (tableView == _categoryView) {
+        // 处理categoryTableView 的点击情况
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // 处理获得成功的responseObject
-        NSLog(@"%@", responseObject[@"list"]);
+        QCRecommendCategory *c = self.categories[indexPath.row];
+        
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        
+        params[@"a"] = @"list";
+        params[@"c"] = @"subscribe";
+        params[@"category_id"] = @(c.id);
+        [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [SVProgressHUD dismiss];
+            // 处理获得成功的responseObject
+            //        NSLog(@"%@", responseObject[@"list"]);
+            
+            self.users = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            [self.userView reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD showErrorWithStatus:@"加载失败~"];
+        }];
+
+    } else {
+        // 处理userTableView的点击情况
         
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
+    }
 }
-
-
 
 @end

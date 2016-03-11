@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class QCRecommendUser;
 @interface QCRecommendUserCell : UITableViewCell
-
+@property (strong, nonatomic) QCRecommendUser *user;
 @end
