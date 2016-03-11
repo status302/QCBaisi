@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QCRecommendViewController">
             <connections>
                 <outlet property="categoryView" destination="dFs-BU-wwN" id="CMg-4m-pZs"/>
+                <outlet property="userView" destination="DxM-f6-30k" id="ViG-HG-K2m"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,11 +28,23 @@
                         <outlet property="delegate" destination="-1" id="4L9-um-FPp"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DxM-f6-30k">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qgn-dt-ykt"/>
+                        <outlet property="delegate" destination="-1" id="Wze-Ij-yrP"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="dFs-BU-wwN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Zr-1K-wPx"/>
+                <constraint firstAttribute="bottom" secondItem="DxM-f6-30k" secondAttribute="bottom" id="CXn-Mo-SyG"/>
                 <constraint firstItem="dFs-BU-wwN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FlI-qy-Sqs"/>
+                <constraint firstItem="DxM-f6-30k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GM9-Fi-xyE"/>
+                <constraint firstItem="DxM-f6-30k" firstAttribute="leading" secondItem="dFs-BU-wwN" secondAttribute="trailing" id="PTk-QS-6n7"/>
+                <constraint firstAttribute="trailing" secondItem="DxM-f6-30k" secondAttribute="trailing" id="Wv5-3m-SGc"/>
                 <constraint firstAttribute="bottom" secondItem="dFs-BU-wwN" secondAttribute="bottom" id="bou-jD-CFb"/>
             </constraints>
         </view>

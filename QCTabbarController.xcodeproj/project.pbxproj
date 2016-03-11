@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		724C7BF0D699288BADA904C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA846BE51CB5FF8A7C1CE7 /* libPods.a */; };
+		86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */; };
+		86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */; };
 		865CEF8D1C9016F200D9C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEF8C1C9016F200D9C4A1 /* main.m */; };
 		865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF971C9016F200D9C4A1 /* Assets.xcassets */; };
 		865CEF9B1C9016F200D9C4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,9 @@
 		49ABD1DAE20EDCD70CD37447 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		58141CB3D34E16E3132D1727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7ECA846BE51CB5FF8A7C1CE7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		86326FA61C92895A004B26A6 /* QCRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendUserCell.h; sourceTree = "<group>"; };
+		86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendUserCell.m; sourceTree = "<group>"; };
+		86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendUserCell.xib; sourceTree = "<group>"; };
 		865CEF881C9016F200D9C4A1 /* QCTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEF8C1C9016F200D9C4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		865CEF971C9016F200D9C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -279,6 +284,9 @@
 				86DFFEC81C91BF7F005D4FF5 /* QCRecommendCategoryCell.h */,
 				86DFFEC91C91BF7F005D4FF5 /* QCRecommendCategoryCell.m */,
 				86DFFECA1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib */,
+				86326FA61C92895A004B26A6 /* QCRecommendUserCell.h */,
+				86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */,
+				86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,6 +524,7 @@
 				86DFFECC1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib in Resources */,
 				86DFFEC21C916DEF005D4FF5 /* QCRecommendViewController.xib in Resources */,
 				86DFFEC41C917FD2005D4FF5 /* Images.xcassets in Resources */,
+				86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */,
 				865CF0121C9167EE00D9C4A1 /* Podfile in Resources */,
 				865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */,
 			);
@@ -596,6 +605,7 @@
 				865CEFFE1C913D9300D9C4A1 /* QCNewViewController.m in Sources */,
 				86DFFECB1C91BF7F005D4FF5 /* QCRecommendCategoryCell.m in Sources */,
 				86DFFEC11C916DEF005D4FF5 /* QCRecommendViewController.m in Sources */,
+				86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */,
 				865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */,
 				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
