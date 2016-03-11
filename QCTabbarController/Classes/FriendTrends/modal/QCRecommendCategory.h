@@ -24,6 +24,7 @@
  */
 @property (nonatomic, assign) NSInteger id;
 
+@property (strong, nonatomic) NSMutableArray *users;
 
 
 @end

@@ -61,7 +61,7 @@
                 <outlet property="screenNameLabel" destination="TvO-he-lPm" id="K5i-2n-sx2"/>
                 <outlet property="userImageView" destination="kbg-qH-pba" id="STs-RR-Okq"/>
             </connections>
-            <point key="canvasLocation" x="237" y="-111"/>
+            <point key="canvasLocation" x="264" y="-69"/>
         </tableViewCell>
     </objects>
     <resources>

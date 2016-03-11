@@ -18,7 +18,7 @@
 @interface QCRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 // 左边的数据
 @property (strong, nonatomic) NSMutableArray *categories;
-@property (strong, nonatomic) NSMutableArray* users;
+//@property (strong, nonatomic) NSMutableArray* users;
 @property (weak, nonatomic) IBOutlet UITableView *userView;
 
 @end
@@ -80,6 +80,7 @@ static NSString * const QCUserCell = @"userCell";
         /**
          *  想要的数据是：responseObject[@"list"]
          */
+        
         self.categories = [QCRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         
@@ -121,7 +122,8 @@ static NSString * const QCUserCell = @"userCell";
     if (tableView == _categoryView) {
         return self.categories.count;
     } else {
-        return self.users.count;
+        QCRecommendCategory *c = self.categories[_categoryView.indexPathForSelectedRow.row];
+        return c.users.count;
     }
 }
 
@@ -136,7 +138,8 @@ static NSString * const QCUserCell = @"userCell";
         return cell;
     } else {
         QCRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:QCUserCell];
-        cell.user = self.users[indexPath.row];
+        QCRecommendCategory *c = self.categories[self.categoryView.indexPathForSelectedRow.row];
+        cell.user = c.users[indexPath.row];
         return cell;
     }
 }
@@ -144,32 +147,38 @@ static NSString * const QCUserCell = @"userCell";
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    QCRecommendCategory *c = self.categories[indexPath.row];
+    
+    
     if (tableView == _categoryView) {
-        // 处理categoryTableView 的点击情况
         
-        QCRecommendCategory *c = self.categories[indexPath.row];
-        
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        
-        params[@"a"] = @"list";
-        params[@"c"] = @"subscribe";
-        params[@"category_id"] = @(c.id);
-        [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [SVProgressHUD dismiss];
-            // 处理获得成功的responseObject
-            //        NSLog(@"%@", responseObject[@"list"]);
-            
-            self.users = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-            
+        if (c.users.count) {
             [self.userView reloadData];
+        } else {
+            // 处理categoryTableView 的点击情况
             
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [SVProgressHUD showErrorWithStatus:@"加载失败~"];
-        }];
-
+            [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            
+            params[@"a"] = @"list";
+            params[@"c"] = @"subscribe";
+            params[@"category_id"] = @(c.id);
+            [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [SVProgressHUD dismiss];
+                // 处理获得成功的responseObject
+                //        NSLog(@"%@", responseObject[@"list"]);
+                
+                NSArray *array = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                [c.users addObjectsFromArray:array];
+                
+                [self.userView reloadData];
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [SVProgressHUD showErrorWithStatus:@"加载失败~"];
+            }];
+        }
     } else {
         // 处理userTableView的点击情况
         

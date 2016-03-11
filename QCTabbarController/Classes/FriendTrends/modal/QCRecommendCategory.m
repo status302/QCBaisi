@@ -8,7 +8,21 @@
 
 #import "QCRecommendCategory.h"
 
+
+@interface QCRecommendCategory()
+
+
+
+@end
+
 @implementation QCRecommendCategory
 
+// 懒加载,初始化users数组
+- (NSMutableArray *)users {
+    if (!_users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
 
 @end
