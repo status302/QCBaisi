@@ -7,6 +7,7 @@
 //
 
 #import "QCFriendViewController.h"
+#import "QCRecommendViewController.h"
 
 @interface QCFriendViewController ()
 
@@ -17,13 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"我的关注";
+    self.navigationItem.title = @"我的关注";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highlightedImage:@"friendsRecommentIcon-click" target:self action:@selector(friendRecommendClick)];
     
     self.view.backgroundColor = [UIColor grayColor];
 }
 -(void)friendRecommendClick {
-    NSLog(@"friendRecommendClick");
+    QCRecommendViewController *recommendVC = [[QCRecommendViewController alloc]init];
+    [self.navigationController pushViewController:recommendVC animated:YES];
 }
 
 @end

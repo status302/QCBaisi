@@ -41,8 +41,11 @@
 
     
     [self addChildVCWithVC:essenceVC Title:@"精华" image:[UIImage imageNamed:@"tabBar_essence_icon"] selectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
+    
     [self addChildVCWithVC:newVC Title:@"最新" image:[UIImage imageNamed:@"tabBar_new_icon"] selectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"]];
+    
     [self addChildVCWithVC:friendVC Title:@"朋友" image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"]];
+    
     [self addChildVCWithVC:meVC Title:@"我" image:[UIImage imageNamed:@"tabBar_me_icon"] selectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"]];
     
     //    self.tabBar = [[QCTabBar alloc]init];
@@ -63,7 +66,7 @@
     // 使用随机的颜色来设置viewController.view 的背景颜色
 //    viewController.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
 
-    // 围着四个控制器添加导航栏
+    // 为这四个控制器添加导航栏
     QCNavigationController *nav = [[QCNavigationController alloc] initWithRootViewController:viewController];
     
     [self addChildViewController:nav];
