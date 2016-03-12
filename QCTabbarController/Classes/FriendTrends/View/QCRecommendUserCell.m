@@ -30,8 +30,9 @@
     _user = user;
     
     [self.userImageView sd_setImageWithURL:[NSURL URLWithString:_user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-        NSLog(@"userImageView completed!");
+
+        // 调试专用
+//        NSLog(@"userImageView completed!");
     } ];
     self.screenNameLabel.text = _user.screen_name;
     self.fansContentLabel.text = [NSString stringWithFormat:@"%@人关注", _user.fans_count];

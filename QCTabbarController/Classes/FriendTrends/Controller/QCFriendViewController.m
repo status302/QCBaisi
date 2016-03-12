@@ -19,6 +19,7 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"我的关注";
+//    self.title = @"我的关注";// 这种方式回导致TabBarItem的frame也会发生变化
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highlightedImage:@"friendsRecommentIcon-click" target:self action:@selector(friendRecommendClick)];
     
     self.view.backgroundColor = [UIColor grayColor];

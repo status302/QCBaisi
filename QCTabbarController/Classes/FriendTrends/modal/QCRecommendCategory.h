@@ -26,5 +26,11 @@
 
 @property (strong, nonatomic) NSMutableArray *users;
 
+@property (nonatomic, assign) NSInteger total;
+
+@property (nonatomic, assign) NSInteger currentPage;
+
+
+
 
 @end
