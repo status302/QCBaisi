@@ -10,7 +10,6 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFNetworking.h>
 #import "MJExtension.h"
-#import <SDImageCache.h>
 #import <MJRefresh.h>
 #import "QCRecommendTag.h"
 #import "QCRecommendTagsCell.h"
@@ -29,6 +28,7 @@ static NSString * const RecommendTagCell = @"RecommendTagCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     self.tableView.rowHeight = 70;
     self.navigationItem.title = @"推荐标签";
     

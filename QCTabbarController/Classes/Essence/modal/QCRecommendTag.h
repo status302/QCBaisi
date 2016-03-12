@@ -21,7 +21,7 @@
 /**
  *  此标签的订阅量
  */
-@property (nonatomic, assign) NSInteger sub_number;
+@property (nonatomic, assign) NSUInteger sub_number;
 
 
 @end
