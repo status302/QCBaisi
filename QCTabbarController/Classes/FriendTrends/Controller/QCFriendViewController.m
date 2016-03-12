@@ -8,8 +8,10 @@
 
 #import "QCFriendViewController.h"
 #import "QCRecommendViewController.h"
+#import "QCLoginRegisterViewController.h"
 
 @interface QCFriendViewController ()
+- (IBAction)loginRegisterButtonClicked;
 
 @end
 
@@ -29,4 +31,10 @@
     [self.navigationController pushViewController:recommendVC animated:YES];
 }
 
+- (IBAction)loginRegisterButtonClicked {
+    
+    QCLoginRegisterViewController *loginRegisterVC = [[QCLoginRegisterViewController alloc] init];
+    
+    [self presentViewController:loginRegisterVC animated:YES completion:nil];
+}
 @end

@@ -13,7 +13,6 @@
 		86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FAC1C92AB7A004B26A6 /* QCRecommendUser.m */; };
 		865CEF8D1C9016F200D9C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEF8C1C9016F200D9C4A1 /* main.m */; };
 		865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF971C9016F200D9C4A1 /* Assets.xcassets */; };
-		865CEF9B1C9016F200D9C4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */; };
 		865CEFA61C9016F200D9C4A1 /* QCTabbarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFA51C9016F200D9C4A1 /* QCTabbarControllerTests.m */; };
 		865CEFB11C9016F200D9C4A1 /* QCTabbarControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFB01C9016F200D9C4A1 /* QCTabbarControllerUITests.m */; };
 		865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFDA1C913D9300D9C4A1 /* QCEssenceViewController.m */; };
@@ -32,12 +31,14 @@
 		86BCFBDD1C940284008289BB /* QCRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBDB1C940284008289BB /* QCRecommendTagsCell.m */; };
 		86BCFBDE1C940284008289BB /* QCRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BCFBDC1C940284008289BB /* QCRecommendTagsCell.xib */; };
 		86BCFBE11C94039A008289BB /* QCRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBE01C94039A008289BB /* QCRecommendTag.m */; };
+		86BCFBE51C94311B008289BB /* QCLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBE31C94311B008289BB /* QCLoginRegisterViewController.m */; };
+		86BCFBE61C94311B008289BB /* QCLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BCFBE41C94311B008289BB /* QCLoginRegisterViewController.xib */; };
 		86DFFEC11C916DEF005D4FF5 /* QCRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFFEBF1C916DEF005D4FF5 /* QCRecommendViewController.m */; };
 		86DFFEC21C916DEF005D4FF5 /* QCRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DFFEC01C916DEF005D4FF5 /* QCRecommendViewController.xib */; };
-		86DFFEC41C917FD2005D4FF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFFEC31C917FD2005D4FF5 /* Images.xcassets */; };
 		86DFFEC71C91BDC4005D4FF5 /* QCRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFFEC61C91BDC4005D4FF5 /* QCRecommendCategory.m */; };
 		86DFFECB1C91BF7F005D4FF5 /* QCRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFFEC91C91BF7F005D4FF5 /* QCRecommendCategoryCell.m */; };
 		86DFFECC1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DFFECA1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib */; };
+		86F514241C94615E006FA510 /* QCVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F514231C94615E006FA510 /* QCVerticalButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,6 @@
 		865CEF881C9016F200D9C4A1 /* QCTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEF8C1C9016F200D9C4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		865CEF971C9016F200D9C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		865CEF9A1C9016F200D9C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		865CEF9C1C9016F200D9C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		865CEFA11C9016F200D9C4A1 /* QCTabbarControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QCTabbarControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEFA51C9016F200D9C4A1 /* QCTabbarControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCTabbarControllerTests.m; sourceTree = "<group>"; };
@@ -107,15 +107,19 @@
 		86BCFBDC1C940284008289BB /* QCRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendTagsCell.xib; sourceTree = "<group>"; };
 		86BCFBDF1C94039A008289BB /* QCRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendTag.h; sourceTree = "<group>"; };
 		86BCFBE01C94039A008289BB /* QCRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendTag.m; sourceTree = "<group>"; };
+		86BCFBE21C94311B008289BB /* QCLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCLoginRegisterViewController.h; sourceTree = "<group>"; };
+		86BCFBE31C94311B008289BB /* QCLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCLoginRegisterViewController.m; sourceTree = "<group>"; };
+		86BCFBE41C94311B008289BB /* QCLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		86DFFEBE1C916DEF005D4FF5 /* QCRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendViewController.h; sourceTree = "<group>"; };
 		86DFFEBF1C916DEF005D4FF5 /* QCRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendViewController.m; sourceTree = "<group>"; };
 		86DFFEC01C916DEF005D4FF5 /* QCRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendViewController.xib; sourceTree = "<group>"; };
-		86DFFEC31C917FD2005D4FF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86DFFEC51C91BDC4005D4FF5 /* QCRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendCategory.h; sourceTree = "<group>"; };
 		86DFFEC61C91BDC4005D4FF5 /* QCRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendCategory.m; sourceTree = "<group>"; };
 		86DFFEC81C91BF7F005D4FF5 /* QCRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendCategoryCell.h; sourceTree = "<group>"; };
 		86DFFEC91C91BF7F005D4FF5 /* QCRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendCategoryCell.m; sourceTree = "<group>"; };
 		86DFFECA1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		86F514221C94615E006FA510 /* QCVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCVerticalButton.h; sourceTree = "<group>"; };
+		86F514231C94615E006FA510 /* QCVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCVerticalButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,9 +185,7 @@
 				865CEFD61C913D9300D9C4A1 /* Classes */,
 				865CEFD51C91371D00D9C4A1 /* QCTabbarController.pch */,
 				865CEF971C9016F200D9C4A1 /* Assets.xcassets */,
-				865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */,
 				865CEF9C1C9016F200D9C4A1 /* Info.plist */,
-				86DFFEC31C917FD2005D4FF5 /* Images.xcassets */,
 				865CEF8B1C9016F200D9C4A1 /* Supporting Files */,
 			);
 			path = QCTabbarController;
@@ -286,6 +288,9 @@
 				86DFFEBE1C916DEF005D4FF5 /* QCRecommendViewController.h */,
 				86DFFEBF1C916DEF005D4FF5 /* QCRecommendViewController.m */,
 				86DFFEC01C916DEF005D4FF5 /* QCRecommendViewController.xib */,
+				86BCFBE21C94311B008289BB /* QCLoginRegisterViewController.h */,
+				86BCFBE31C94311B008289BB /* QCLoginRegisterViewController.m */,
+				86BCFBE41C94311B008289BB /* QCLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +315,8 @@
 				86326FA61C92895A004B26A6 /* QCRecommendUserCell.h */,
 				86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */,
 				86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */,
+				86F514221C94615E006FA510 /* QCVerticalButton.h */,
+				86F514231C94615E006FA510 /* QCVerticalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,14 +550,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				865CF0101C9161BB00D9C4A1 /* QCFriendViewController.xib in Resources */,
-				865CEF9B1C9016F200D9C4A1 /* LaunchScreen.storyboard in Resources */,
 				86DFFECC1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib in Resources */,
 				86DFFEC21C916DEF005D4FF5 /* QCRecommendViewController.xib in Resources */,
-				86DFFEC41C917FD2005D4FF5 /* Images.xcassets in Resources */,
 				86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */,
 				865CF0121C9167EE00D9C4A1 /* Podfile in Resources */,
 				86BCFBDE1C940284008289BB /* QCRecommendTagsCell.xib in Resources */,
 				865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */,
+				86BCFBE61C94311B008289BB /* QCLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +644,9 @@
 				865CEFFD1C913D9300D9C4A1 /* QCMeViewController.m in Sources */,
 				865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */,
 				865CF0021C913D9300D9C4A1 /* UIView+QC.m in Sources */,
+				86BCFBE51C94311B008289BB /* QCLoginRegisterViewController.m in Sources */,
 				86BCFBD91C940265008289BB /* QCRecommendTagsViewController.m in Sources */,
+				86F514241C94615E006FA510 /* QCVerticalButton.m in Sources */,
 				86BCFBE11C94039A008289BB /* QCRecommendTag.m in Sources */,
 				865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */,
 				865CF0001C913D9300D9C4A1 /* QCTabbarController.m in Sources */,
@@ -675,17 +683,6 @@
 			targetProxy = 865CEFAD1C9016F200D9C4A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		865CEF991C9016F200D9C4A1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				865CEF9A1C9016F200D9C4A1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		865CEFB31C9016F200D9C4A1 /* Debug */ = {

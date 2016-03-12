@@ -44,8 +44,6 @@ static NSString * const RecommendTagCell = @"RecommendTagCell";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
-        // 打印出请求的结果
-        NSLog(@"%@", responseObject);
         self.recommendTags = [QCRecommendTag mj_objectArrayWithKeyValuesArray:responseObject];
         
         [self.tableView reloadData];
