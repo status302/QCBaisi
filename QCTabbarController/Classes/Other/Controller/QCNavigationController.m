@@ -65,7 +65,7 @@
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
         
         // 当push的时候隐藏tabbar
-//        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     
 

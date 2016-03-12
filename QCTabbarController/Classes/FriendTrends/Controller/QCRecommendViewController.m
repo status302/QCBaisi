@@ -6,11 +6,11 @@
 //  Copyright © 2016年 QC Inc. All rights reserved.
 //
 
-#import "QCRecommendViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFNetworking/AFNetworking.h>
-#import "QCRecommendCategory.h"
+#import "QCRecommendViewController.h"
 #import "QCRecommendCategoryCell.h"
+#import "QCRecommendCategory.h"
 #import "QCRecommendUserCell.h"
 #import "QCRecommendUser.h"
 #import "MJExtension.h"
@@ -24,6 +24,10 @@
 //@property (strong, nonatomic) NSMutableArray* users;
 @property (weak, nonatomic) IBOutlet UITableView *userView;
 
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
+
+@property (strong, nonatomic) NSMutableDictionary *params;
+
 @end
 
 @implementation QCRecommendViewController
@@ -33,6 +37,14 @@
  */
 static NSString * const QCCategoryCell = @"QCCategoryCell";
 static NSString * const QCUserCell = @"userCell";
+
+// 懒加载manager数据、、、、所有的请求都归它来管理
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,7 +64,47 @@ static NSString * const QCUserCell = @"userCell";
 }
 
 -(void) loadNewUsers {
-    NSLog(@"load new users ");
+    // 在这里刷新数据，也就是说要重新获取第一页的数据
+    QCRecommendCategory *c = recommendCategory;
+    c.currentPage = 1;
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(c.id);
+    params[@"page"] = @(c.currentPage);
+    self.params = params;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       
+         // block 里的params 是上次的params，这是block的特征之一，调用外部变量时。
+        if (self.params != params) return ;
+        // 先清除users所有的数据，刷新只要新的数据
+        [c.users removeAllObjects];
+        // 处理获得成功的responseObject
+        
+        c.total = [responseObject[@"total"]integerValue];
+        
+        NSArray *array = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [c.users addObjectsFromArray:array];
+        
+        [self.userView reloadData];
+        
+        
+        [self.userView.mj_header endRefreshing];
+        
+        [self checkFootState];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (self.params != params) {
+            return ;
+        }
+        [SVProgressHUD showErrorWithStatus:@"数据加载失败~"];
+        [self.userView.mj_header endRefreshing];
+    }];
+    
+    
 }
 
 - (void) loadMoreUsers {
@@ -64,17 +116,18 @@ static NSString * const QCUserCell = @"userCell";
     // 处理categoryTableView 的点击情况
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
+    
+    self.params = params;
     params[@"page"] = @(++category.currentPage);
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // 处理获得成功的responseObject
-        //        NSLog(@"%@", responseObject[@"list"]);
-        
+        if (self.params != params) {
+            return ;
+        }
         NSArray *array = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [category.users addObjectsFromArray:array];
         
@@ -83,12 +136,19 @@ static NSString * const QCUserCell = @"userCell";
         [self checkFootState];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        if (self.params != params) {
+            return ;
+        }
+        [SVProgressHUD showErrorWithStatus:@"数据加载失败~"];
+        [self.userView.mj_footer endRefreshing];
     }];
 }
 
 - (void) checkFootState {
     QCRecommendCategory *category = recommendCategory;
+    // 实时改变Foot的状态
+    self.userView.mj_footer.hidden = (category.users.count == 0); // 根据users的数目来确定userView.footer Refresh是否显示
+    
     if (category.users.count == category.total) {
         [self.userView.mj_footer endRefreshingWithNoMoreData];
     } else {
@@ -100,17 +160,13 @@ static NSString * const QCUserCell = @"userCell";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
-    
     // 菊花显示
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
 
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
-        // when the request is success
-        //        NSLog(@"%@", responseObject[@"list"]);
-        
         /**
          *  在这里自己处理所得出的数据，而不用MJExtension
          */
@@ -144,6 +200,8 @@ static NSString * const QCUserCell = @"userCell";
         
         [self.categoryView reloadData];
         [self.categoryView selectRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        // 进入这个界面就显示相关的第一行的users
+        [self.userView.mj_header beginRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -178,13 +236,10 @@ static NSString * const QCUserCell = @"userCell";
 
 #pragma mark - UITableView Datasource
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == _categoryView) {
-        return self.categories.count;
-    } else {
-        NSInteger count = [recommendCategory users].count;
-        self.userView.mj_footer.hidden = (count == 0);
-        return count;
-    }
+    if (tableView == _categoryView) return self.categories.count;
+
+    [self checkFootState];
+    return [recommendCategory users].count;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -209,55 +264,23 @@ static NSString * const QCUserCell = @"userCell";
     
     QCRecommendCategory *c = recommendCategory;
     
-    
-    if (tableView == _categoryView) {
-        
-        if (c.users.count) {
-            [self.userView reloadData];
-        } else {
-            // 刷新表格：为了切换的时候马上显示当前userView的数据
-            [self.userView reloadData];
-            // 处理categoryTableView 的点击情况
-            c.currentPage = 1;
-            
-            [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-            NSMutableDictionary *params = [NSMutableDictionary dictionary];
-            
-            params[@"a"] = @"list";
-            params[@"c"] = @"subscribe";
-            params[@"category_id"] = @(c.id);
-            params[@"page"] = @(c.currentPage);
-            [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                
-                [SVProgressHUD dismiss];
-                // 处理获得成功的responseObject
-                //        NSLog(@"%@", responseObject[@"list"]);
-                
-                c.total = [responseObject[@"total"]integerValue];
-                
-                NSArray *array = [QCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                [c.users addObjectsFromArray:array];
-                
-                [self.userView reloadData];
-                
-                // 检查底部的状态
-                [self checkFootState];
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                [SVProgressHUD showErrorWithStatus:@"数据加载失败~"];
-            }];
-        }
+    //避免点击这个category的时候，其他category还在刷新ing
+    [self.userView.mj_header endRefreshing];
+    [self.userView.mj_footer endRefreshing];
+    if (c.users.count) {
+        [self.userView reloadData];
     } else {
-        // 处理userTableView的点击情况
+        // 刷新表格：为了切换的时候马上显示当前userView的数据
+        [self.userView reloadData];
+        // 处理categoryTableView 的点击情况
         
-        
+        [self.userView.mj_header beginRefreshing];
     }
 }
-
-- (void) loadUsers {
-    
+#pragma mark - 控制器的销毁
+- (void)dealloc {
+    // 停止所有的请求操作
+    [self.manager.operationQueue cancelAllOperations];
 }
 
 @end
