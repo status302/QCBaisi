@@ -14,4 +14,6 @@
 #import "UIBarButtonItem+QC.h"
 
 #define QCRGBColor(r, g, b) [UIColor colorWithRed: (r)/255.0 green: (g)/255.0 blue:(b)/255.0 alpha: 1.0]
+
+#define URL @"http://api.budejie.com/api/api_open.php"
 #endif /* QCTabbarController_pch */

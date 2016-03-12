@@ -7,6 +7,7 @@
 //
 
 #import "QCEssenceViewController.h"
+#import "QCRecommendTagsViewController.h"
 
 
 @interface QCEssenceViewController ()
@@ -28,11 +29,9 @@
 }
 
 - (void) mainTagClick {
-    NSLog(@"点击了leftItem");
     
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    [self.navigationController pushViewController:vc animated:YES];
+    QCRecommendTagsViewController *recommendTagsVC = [[QCRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:recommendTagsVC animated:YES];
     
 }
 - (void)didReceiveMemoryWarning {
