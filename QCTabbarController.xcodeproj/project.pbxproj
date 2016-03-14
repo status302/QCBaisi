@@ -11,6 +11,7 @@
 		86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */; };
 		86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */; };
 		86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FAC1C92AB7A004B26A6 /* QCRecommendUser.m */; };
+		864E71AE1C96849300B5D5BC /* QCLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 864E71AD1C96849300B5D5BC /* QCLoginRegisterTextField.m */; };
 		865CEF8D1C9016F200D9C4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEF8C1C9016F200D9C4A1 /* main.m */; };
 		865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865CEF971C9016F200D9C4A1 /* Assets.xcassets */; };
 		865CEFA61C9016F200D9C4A1 /* QCTabbarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CEFA51C9016F200D9C4A1 /* QCTabbarControllerTests.m */; };
@@ -67,6 +68,8 @@
 		86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendUserCell.xib; sourceTree = "<group>"; };
 		86326FAB1C92AB7A004B26A6 /* QCRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendUser.h; sourceTree = "<group>"; };
 		86326FAC1C92AB7A004B26A6 /* QCRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendUser.m; sourceTree = "<group>"; };
+		864E71AC1C96849300B5D5BC /* QCLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCLoginRegisterTextField.h; sourceTree = "<group>"; };
+		864E71AD1C96849300B5D5BC /* QCLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCLoginRegisterTextField.m; sourceTree = "<group>"; };
 		865CEF881C9016F200D9C4A1 /* QCTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QCTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CEF8C1C9016F200D9C4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		865CEF971C9016F200D9C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -317,6 +320,8 @@
 				86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */,
 				86F514221C94615E006FA510 /* QCVerticalButton.h */,
 				86F514231C94615E006FA510 /* QCVerticalButton.m */,
+				864E71AC1C96849300B5D5BC /* QCLoginRegisterTextField.h */,
+				864E71AD1C96849300B5D5BC /* QCLoginRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				86BCFBDD1C940284008289BB /* QCRecommendTagsCell.m in Sources */,
 				86DFFEC11C916DEF005D4FF5 /* QCRecommendViewController.m in Sources */,
 				86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */,
+				864E71AE1C96849300B5D5BC /* QCLoginRegisterTextField.m in Sources */,
 				865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */,
 				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,
 				86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */,
