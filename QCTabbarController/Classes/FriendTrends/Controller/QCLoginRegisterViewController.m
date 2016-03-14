@@ -52,9 +52,11 @@
         
         [self.loginRegiterButtonClicked setTitle:@"已有账号?" forState:UIControlStateNormal];
         self.loginViewLeading.constant = - self.view.width;
+        self.loginRegiterButtonClicked.selected = YES;
     } else { // 切换到登录框
         [self.loginRegiterButtonClicked setTitle:@"点击注册" forState:UIControlStateNormal];
         self.loginViewLeading.constant = 0;
+        self.loginRegiterButtonClicked.selected = NO;
     }
     [UIView animateWithDuration:0.25 animations:^{
         [self.view layoutIfNeeded];
