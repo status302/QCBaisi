@@ -8,13 +8,19 @@
 
 #import "QCEssenceViewController.h"
 #import "QCRecommendTagsViewController.h"
+#import "QCAllViewController.h"
+#import "QCVidieoViewController.h"
+#import "QCVoiceViewController.h"
+#import "QCWordViewController.h"
+#import "QCPictureViewController.h"
 
-
-@interface QCEssenceViewController ()
+@interface QCEssenceViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) UIButton *selectedButton;
 @property (weak, nonatomic) UIView *headerView;
 @property (weak, nonatomic) UIView *redIndicatorView;
+
+@property (weak, nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -28,6 +34,32 @@
     
     [self setupHeaderView];
     
+    // 添加childVC
+    [self setupChildVC];
+    
+    // 添加scrollView
+    [self setupContentView];
+    
+    
+}
+
+-(void) setupChildVC {
+ 
+    QCAllViewController *all = [[QCAllViewController alloc]init];
+    [self addChildViewController:all];
+    
+    QCVidieoViewController *video = [[QCVidieoViewController alloc] init];
+    [self addChildViewController:video];
+    
+    QCVoiceViewController *voice = [[QCVoiceViewController alloc] init];
+    [self addChildViewController:voice];
+    
+    QCPictureViewController *picture = [[QCPictureViewController alloc] init];
+    [self addChildViewController:picture];
+    
+    QCWordViewController *word = [[QCWordViewController alloc] init];
+    [self addChildViewController:word];
+    
 }
 
 - (void) setupHeaderView {
@@ -38,7 +70,7 @@
     headerBackgroundView.x = 0.0;
     headerBackgroundView.y = 64.0;
     headerBackgroundView.width = self.view.width;
-    headerBackgroundView.height = 45.0;
+    headerBackgroundView.height = 35.0;
     
     [self.view addSubview:headerBackgroundView];
     
@@ -52,8 +84,7 @@
     indicatorView.backgroundColor = [UIColor redColor];
     
     [headerBackgroundView addSubview:indicatorView];
-    
-    self.redIndicatorView = indicatorView;
+
 
     
     // 添加按钮
@@ -64,6 +95,8 @@
     CGFloat y = 0.0;
     for (NSInteger i=0; i<buttonsArray.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        button.tag = i*1000;
+        [button setTag:i * 1000];
         button.frame = CGRectMake(width*i, y, width, height);
         
         [button setTitle:buttonsArray[i] forState:UIControlStateNormal];
@@ -86,6 +119,7 @@
         }
     }
     
+    self.redIndicatorView = indicatorView;
     
 }
 - (void) handleHeaderButton: (UIButton *)button {
@@ -97,19 +131,81 @@
         self.redIndicatorView.width = button.titleLabel.width;
          self.redIndicatorView.centerX  = button.centerX;
     }];
+    
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = self.scrollView.width * button.tag/1000;
+    [self.scrollView setContentOffset:offset animated:YES];
 }
-
+/**
+ *  设置导航栏
+ */
 - (void) setupNav {
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" target:self action:@selector(mainTagClick)];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
 }
-
+/**
+ *  设置中间的ScrollView方法
+ */
+-(void) setupContentView {
+    // 不让系统自己设置scrollView的Insets
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    UIScrollView *contentView = [[UIScrollView alloc]init];
+    
+    contentView.frame = self.view.bounds;
+    contentView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.9];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    button.frame = CGRectMake(0, 0, 100, 40);
+    [contentView addSubview:button];
+    
+    contentView.delegate = self;
+    contentView.pagingEnabled = YES;
+    // 设置contentView的课滑动的尺寸，0表示height方向不可滑动
+    contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
+    
+    [self.view insertSubview:contentView atIndex:0];
+    self.scrollView = contentView;
+    
+    // 添加第一个控制器的view
+    [self scrollViewDidEndScrollingAnimation:contentView];
+    
+}
 - (void) mainTagClick {
     
     QCRecommendTagsViewController *recommendTagsVC = [[QCRecommendTagsViewController alloc] init];
     [self.navigationController pushViewController:recommendTagsVC animated:YES];
     
+}
+
+#pragma mark - UIScrollView Delegate 
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
+    UITableViewController *vc = self.childViewControllers[index];
+    vc.view.x = scrollView.contentOffset.x;
+    vc.view.y = 0; //默认为20， 在这里将其改为0
+    vc.view.height = scrollView.height;
+    vc.view.width = scrollView.width;
+    vc.tableView.contentInset = UIEdgeInsetsMake(99.0, 0, 49, 0);
+    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    
+    [scrollView addSubview:vc.view];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    NSMutableArray *buttons = [NSMutableArray array];
+    for (UIView *button in self.headerView.subviews) {
+        if ([button isKindOfClass:[UIControl class]]) {
+            [buttons addObject:button];
+        }
+    }
+    [self handleHeaderButton:buttons[index]];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
