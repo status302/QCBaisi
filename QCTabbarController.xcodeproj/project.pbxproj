@@ -39,6 +39,9 @@
 		86BCFBE11C94039A008289BB /* QCRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBE01C94039A008289BB /* QCRecommendTag.m */; };
 		86BCFBE51C94311B008289BB /* QCLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBE31C94311B008289BB /* QCLoginRegisterViewController.m */; };
 		86BCFBE61C94311B008289BB /* QCLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BCFBE41C94311B008289BB /* QCLoginRegisterViewController.xib */; };
+		86C11B1B1CAE54BB00AAC3AC /* QCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C11B1A1CAE54BB00AAC3AC /* QCTopic.m */; };
+		86C11B1F1CAE576200AAC3AC /* QCTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C11B1D1CAE576200AAC3AC /* QCTopicCell.m */; };
+		86C11B201CAE576200AAC3AC /* QCTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C11B1E1CAE576200AAC3AC /* QCTopicCell.xib */; };
 		86DFFEC11C916DEF005D4FF5 /* QCRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFFEBF1C916DEF005D4FF5 /* QCRecommendViewController.m */; };
 		86DFFEC21C916DEF005D4FF5 /* QCRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DFFEC01C916DEF005D4FF5 /* QCRecommendViewController.xib */; };
 		86DFFEC71C91BDC4005D4FF5 /* QCRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFFEC61C91BDC4005D4FF5 /* QCRecommendCategory.m */; };
@@ -128,6 +131,11 @@
 		86BCFBE21C94311B008289BB /* QCLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCLoginRegisterViewController.h; sourceTree = "<group>"; };
 		86BCFBE31C94311B008289BB /* QCLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCLoginRegisterViewController.m; sourceTree = "<group>"; };
 		86BCFBE41C94311B008289BB /* QCLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		86C11B191CAE54BB00AAC3AC /* QCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTopic.h; sourceTree = "<group>"; };
+		86C11B1A1CAE54BB00AAC3AC /* QCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTopic.m; sourceTree = "<group>"; };
+		86C11B1C1CAE576200AAC3AC /* QCTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTopicCell.h; sourceTree = "<group>"; };
+		86C11B1D1CAE576200AAC3AC /* QCTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTopicCell.m; sourceTree = "<group>"; };
+		86C11B1E1CAE576200AAC3AC /* QCTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCTopicCell.xib; sourceTree = "<group>"; };
 		86DFFEBE1C916DEF005D4FF5 /* QCRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendViewController.h; sourceTree = "<group>"; };
 		86DFFEBF1C916DEF005D4FF5 /* QCRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendViewController.m; sourceTree = "<group>"; };
 		86DFFEC01C916DEF005D4FF5 /* QCRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendViewController.xib; sourceTree = "<group>"; };
@@ -283,6 +291,8 @@
 			children = (
 				86BCFBDF1C94039A008289BB /* QCRecommendTag.h */,
 				86BCFBE01C94039A008289BB /* QCRecommendTag.m */,
+				86C11B191CAE54BB00AAC3AC /* QCTopic.h */,
+				86C11B1A1CAE54BB00AAC3AC /* QCTopic.m */,
 			);
 			path = modal;
 			sourceTree = "<group>";
@@ -293,6 +303,9 @@
 				86BCFBDA1C940284008289BB /* QCRecommendTagsCell.h */,
 				86BCFBDB1C940284008289BB /* QCRecommendTagsCell.m */,
 				86BCFBDC1C940284008289BB /* QCRecommendTagsCell.xib */,
+				86C11B1C1CAE576200AAC3AC /* QCTopicCell.h */,
+				86C11B1D1CAE576200AAC3AC /* QCTopicCell.m */,
+				86C11B1E1CAE576200AAC3AC /* QCTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +598,7 @@
 				86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */,
 				865CF0121C9167EE00D9C4A1 /* Podfile in Resources */,
 				86BCFBDE1C940284008289BB /* QCRecommendTagsCell.xib in Resources */,
+				86C11B201CAE576200AAC3AC /* QCTopicCell.xib in Resources */,
 				865CEF981C9016F200D9C4A1 /* Assets.xcassets in Resources */,
 				86BCFBE61C94311B008289BB /* QCLoginRegisterViewController.xib in Resources */,
 			);
@@ -675,6 +689,7 @@
 				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,
 				864E71BD1C97A97B00B5D5BC /* QCWordViewController.m in Sources */,
 				86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */,
+				86C11B1F1CAE576200AAC3AC /* QCTopicCell.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
 				865CEFFD1C913D9300D9C4A1 /* QCMeViewController.m in Sources */,
 				865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */,
@@ -682,6 +697,7 @@
 				864E71BA1C97A96500B5D5BC /* QCPictureViewController.m in Sources */,
 				86BCFBE51C94311B008289BB /* QCLoginRegisterViewController.m in Sources */,
 				86BCFBD91C940265008289BB /* QCRecommendTagsViewController.m in Sources */,
+				86C11B1B1CAE54BB00AAC3AC /* QCTopic.m in Sources */,
 				86F514241C94615E006FA510 /* QCVerticalButton.m in Sources */,
 				86BCFBE11C94039A008289BB /* QCRecommendTag.m in Sources */,
 				865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */,
