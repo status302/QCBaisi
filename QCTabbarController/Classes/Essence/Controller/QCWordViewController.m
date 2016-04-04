@@ -33,11 +33,6 @@ static NSString * const topicCellId = @"topicCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     [self.tableView.mj_header beginRefreshing];
@@ -50,6 +45,8 @@ static NSString * const topicCellId = @"topicCell";
      *  注册nib
      */
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QCTopicCell class]) bundle:nil] forCellReuseIdentifier:topicCellId];
+    
+    self.tableView.rowHeight = 154.0;
 }
 
 - (void )refreshData {

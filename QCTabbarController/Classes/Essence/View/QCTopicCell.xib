@@ -49,8 +49,11 @@
                                     <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <state key="highlighted" image="mainCellDingClick"/>
+                                <connections>
+                                    <action selector="dingbuttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VWZ-Gp-aOh"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQS-JH-KWR" userLabel="踩">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQS-JH-KWR" userLabel="分享">
                                 <rect key="frame" x="169" y="0.0" width="84.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="1111" image="mainCellShare">
@@ -58,15 +61,18 @@
                                 </state>
                                 <state key="highlighted" image="mainCellShareClick"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-nL-ssP" userLabel="评论">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-nL-ssP" userLabel="踩">
                                 <rect key="frame" x="84.5" y="0.0" width="84.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="111" image="mainCellCai">
                                     <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <state key="highlighted" image="mainCellCaiClick"/>
+                                <connections>
+                                    <action selector="caiButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="10V-lg-DhF"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-Cg-lGa" userLabel="分享">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-Cg-lGa" userLabel="评论">
                                 <rect key="frame" x="253.5" y="0.0" width="84.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="11112" image="mainCellComment">
@@ -117,6 +123,15 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="caiButton" destination="ugW-nL-ssP" id="jpZ-9h-fyP"/>
+                <outlet property="commentButton" destination="poJ-Cg-lGa" id="Rec-Ak-lRb"/>
+                <outlet property="dingButton" destination="jC9-hl-64U" id="fbO-vb-I1S"/>
+                <outlet property="passtime_label" destination="2Uc-if-8Ue" id="9on-4g-AoA"/>
+                <outlet property="profile_image_view" destination="bxf-IV-N7u" id="cfJ-nj-znr"/>
+                <outlet property="screen_name_label" destination="yp3-RU-WjX" id="gfP-yr-eQ4"/>
+                <outlet property="shareButton" destination="BQS-JH-KWR" id="Y7q-ad-gV4"/>
+            </connections>
             <point key="canvasLocation" x="256" y="352"/>
         </tableViewCell>
     </objects>
