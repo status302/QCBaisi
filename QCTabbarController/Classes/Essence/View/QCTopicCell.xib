@@ -37,7 +37,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97O-Kl-of7">
                         <rect key="frame" x="298" y="8" width="19" height="22"/>
                         <state key="normal" image="cellFollowIcon"/>
-                        <state key="highlighted" image="FollowBtnClickBg"/>
+                        <state key="highlighted" image="cellFollowClickIcon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSF-Db-d8a" userLabel="底部的view">
                         <rect key="frame" x="0.0" y="110" width="338" height="44"/>
@@ -136,7 +136,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="FollowBtnClickBg" width="51" height="25"/>
+        <image name="cellFollowClickIcon" width="19" height="20"/>
         <image name="cellFollowIcon" width="19" height="20"/>
         <image name="mainCellCai" width="20" height="20"/>
         <image name="mainCellCaiClick" width="20" height="20"/>

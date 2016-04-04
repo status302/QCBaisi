@@ -37,14 +37,6 @@
     _topic = topic;
     
     
-    // 处理时间正确显示
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    
-    NSDate *pastDate = [formatter dateFromString:_topic.passtime];
-    
-    
-    
     [self.profile_image_view sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:_topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageContinueInBackground progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

@@ -33,6 +33,7 @@
 		865CF00B1C91493D00D9C4A1 /* QCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */; };
 		865CF0101C9161BB00D9C4A1 /* QCFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865CF00F1C9161BB00D9C4A1 /* QCFriendViewController.xib */; };
 		865CF0121C9167EE00D9C4A1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 865CF0111C9167EE00D9C4A1 /* Podfile */; };
+		86869FB31CB2865F009025B6 /* NSDate+QC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86869FB21CB2865F009025B6 /* NSDate+QC.m */; };
 		86BCFBD91C940265008289BB /* QCRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBD81C940265008289BB /* QCRecommendTagsViewController.m */; };
 		86BCFBDD1C940284008289BB /* QCRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BCFBDB1C940284008289BB /* QCRecommendTagsCell.m */; };
 		86BCFBDE1C940284008289BB /* QCRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BCFBDC1C940284008289BB /* QCRecommendTagsCell.xib */; };
@@ -121,6 +122,8 @@
 		865CF00A1C91493D00D9C4A1 /* QCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationController.m; sourceTree = "<group>"; };
 		865CF00F1C9161BB00D9C4A1 /* QCFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCFriendViewController.xib; sourceTree = "<group>"; };
 		865CF0111C9167EE00D9C4A1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		86869FB11CB2865F009025B6 /* NSDate+QC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+QC.h"; sourceTree = "<group>"; };
+		86869FB21CB2865F009025B6 /* NSDate+QC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QC.m"; sourceTree = "<group>"; };
 		86BCFBD71C940265008289BB /* QCRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendTagsViewController.h; sourceTree = "<group>"; };
 		86BCFBD81C940265008289BB /* QCRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendTagsViewController.m; sourceTree = "<group>"; };
 		86BCFBDA1C940284008289BB /* QCRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendTagsCell.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 		865CEFEF1C913D9300D9C4A1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				86869FB11CB2865F009025B6 /* NSDate+QC.h */,
+				86869FB21CB2865F009025B6 /* NSDate+QC.m */,
 				865CEFF01C913D9300D9C4A1 /* AppDelegate.h */,
 				865CEFF11C913D9300D9C4A1 /* AppDelegate.m */,
 				865CEFF21C913D9300D9C4A1 /* Controller */,
@@ -683,6 +688,7 @@
 				864E71B41C97A94600B5D5BC /* QCVidieoViewController.m in Sources */,
 				864E71B11C97A93200B5D5BC /* QCAllViewController.m in Sources */,
 				86DFFEC11C916DEF005D4FF5 /* QCRecommendViewController.m in Sources */,
+				86869FB31CB2865F009025B6 /* NSDate+QC.m in Sources */,
 				86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */,
 				864E71AE1C96849300B5D5BC /* QCLoginRegisterTextField.m in Sources */,
 				865CF0011C913D9300D9C4A1 /* QCTabBar.m in Sources */,
