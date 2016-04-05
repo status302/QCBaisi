@@ -27,7 +27,14 @@
 @implementation QCTopicCell
 
 - (void)awakeFromNib {
-
+    /**
+     * 给cell添加背景图片
+     */
+    UIImageView *backImageView = [[UIImageView alloc]init];
+    backImageView.image = [UIImage imageNamed:@"mainCellBackground"];
+    [self setBackgroundView:backImageView];
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,7 +43,6 @@
 - (void)setTopic:(QCTopic *)topic {
     _topic = topic;
     
-    
     [self.profile_image_view sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:_topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageContinueInBackground progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -44,12 +50,28 @@
     }];
     [self.screen_name_label setText:_topic.screen_name];
     [self.passtime_label setText:_topic.passtime];
-    [self.dingButton setTitle:_topic.ding forState:UIControlStateNormal];
-    [self.caiButton setTitle:_topic.cai forState:UIControlStateNormal];
-    [self.shareButton setTitle:_topic.repost forState:UIControlStateNormal];
-    [self.commentButton setTitle:_topic.comment forState:UIControlStateNormal];
+    
+    [self.dingButton setTitle:[self changeTitleWithCount:_topic.ding] forState:UIControlStateNormal];
+    [self.caiButton setTitle:[self changeTitleWithCount:_topic.cai] forState:UIControlStateNormal];
+    [self.shareButton setTitle:[self changeTitleWithCount:_topic.repost] forState:UIControlStateNormal];
+    [self.commentButton setTitle:[self changeTitleWithCount:_topic.comment] forState:UIControlStateNormal];
+    
 }
 
+/**
+ *  处理cell涉及到的数字
+ *
+ */
+- (NSString *) changeTitleWithCount:(NSInteger)count{
+
+    NSString *result = [NSString string];
+    if (count > 10000) {
+        result = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
+    } else {
+       result = [NSString stringWithFormat:@"%zd", count];
+    }
+    return result;
+}
 
 - (IBAction)dingbuttonClicked:(id)sender {
 }

@@ -20,19 +20,19 @@
 /**
  *  踩的人数
  */
-@property (nonatomic, copy) NSString *cai;
+@property (nonatomic, assign) NSInteger cai;
 /**
  *  顶的数目
  */
-@property (nonatomic, copy)  NSString *ding;
+@property (nonatomic, assign)  NSInteger ding;
 /**
  *  评论的数目
  */
-@property (copy, nonatomic) NSString* comment;
+@property (assign, nonatomic) NSInteger comment;
 /**
  *  分享的数目
  */
-@property (copy, nonatomic) NSString* repost;
+@property (assign, nonatomic) NSInteger repost;
 /**
  *  昵称
  */

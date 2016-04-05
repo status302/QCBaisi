@@ -8,11 +8,7 @@
 
 #import "QCEssenceViewController.h"
 #import "QCRecommendTagsViewController.h"
-#import "QCAllViewController.h"
-#import "QCVidieoViewController.h"
-#import "QCVoiceViewController.h"
-#import "QCWordViewController.h"
-#import "QCPictureViewController.h"
+#import "QCTopicViewController.h"
 
 @interface QCEssenceViewController () <UIScrollViewDelegate>
 
@@ -45,19 +41,19 @@
 
 -(void) setupChildVC {
  
-    QCAllViewController *all = [[QCAllViewController alloc]init];
+    QCTopicViewController *all = [[QCTopicViewController alloc]init];
     [self addChildViewController:all];
     
-    QCVidieoViewController *video = [[QCVidieoViewController alloc] init];
+    QCTopicViewController *video = [[QCTopicViewController alloc] init];
     [self addChildViewController:video];
     
-    QCVoiceViewController *voice = [[QCVoiceViewController alloc] init];
+    QCTopicViewController *voice = [[QCTopicViewController alloc] init];
     [self addChildViewController:voice];
     
-    QCPictureViewController *picture = [[QCPictureViewController alloc] init];
+    QCTopicViewController *picture = [[QCTopicViewController alloc] init];
     [self addChildViewController:picture];
     
-    QCWordViewController *word = [[QCWordViewController alloc] init];
+    QCTopicViewController *word = [[QCTopicViewController alloc] init];
     [self addChildViewController:word];
     
 }

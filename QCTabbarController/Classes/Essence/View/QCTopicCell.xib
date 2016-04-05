@@ -132,7 +132,7 @@
                 <outlet property="screen_name_label" destination="yp3-RU-WjX" id="gfP-yr-eQ4"/>
                 <outlet property="shareButton" destination="BQS-JH-KWR" id="Y7q-ad-gV4"/>
             </connections>
-            <point key="canvasLocation" x="256" y="352"/>
+            <point key="canvasLocation" x="278" y="411"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -11,6 +11,13 @@
 
 @implementation QCTopic
 
+
+
+/**
+ *  处理时间
+ *
+ *  @return 返回处理好的创建帖子的时间
+ */
 - (NSString *)passtime {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";

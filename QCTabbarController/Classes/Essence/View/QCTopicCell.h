@@ -14,4 +14,5 @@
  *  topic
  */
 @property (strong, nonatomic) QCTopic *topic;
+- (NSString *) changeTitleWithCount:(NSInteger)count;
 @end
