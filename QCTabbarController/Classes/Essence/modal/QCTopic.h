@@ -41,5 +41,10 @@
  *  发帖子的时间
  */
 @property (copy, nonatomic) NSString* passtime;
+/**
+ *  cell的高度
+ */
+@property (nonatomic, assign) CGFloat cellHeight;
+
 
 @end

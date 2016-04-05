@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profile_image_view;
 @property (weak, nonatomic) IBOutlet UILabel *screen_name_label;
 @property (weak, nonatomic) IBOutlet UILabel *passtime_label;
+@property (weak, nonatomic) IBOutlet UILabel *mainTextLabel;
 
 @end
 
@@ -40,6 +41,16 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
+
+- (void)setFrame:(CGRect)frame {
+    
+    frame.origin.x = 3.0;
+    frame.size.width -= 2 * frame.origin.x;
+    frame.size.height -= 3.0;
+    // 设置完了之后再调用父类的这个方法该方法才会生效
+    [super setFrame:frame];
+}
+
 - (void)setTopic:(QCTopic *)topic {
     _topic = topic;
     
@@ -55,7 +66,7 @@
     [self.caiButton setTitle:[self changeTitleWithCount:_topic.cai] forState:UIControlStateNormal];
     [self.shareButton setTitle:[self changeTitleWithCount:_topic.repost] forState:UIControlStateNormal];
     [self.commentButton setTitle:[self changeTitleWithCount:_topic.comment] forState:UIControlStateNormal];
-    
+    [self.mainTextLabel setText:_topic.text];
 }
 
 /**

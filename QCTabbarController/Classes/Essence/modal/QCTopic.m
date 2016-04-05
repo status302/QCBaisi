@@ -35,7 +35,7 @@
                 return [NSString stringWithFormat:@"刚刚"];
             }
         } else if([createTime isYesterday]) { // 昨天
-            formatter.dateFormat = @"昨天HH:mm:ss";
+            formatter.dateFormat = @"昨天HH:mm";
             return [formatter stringFromDate:createTime];
         } else {
             formatter.dateFormat = @"MM-dd HH:mm:ss";
@@ -44,8 +44,15 @@
     } else { // 非今年
         return _passtime;
     }
-    
-    
 }
-
+- (CGFloat)cellHeight {
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 6.0 - 6.0, MAXFLOAT);
+    if (!_cellHeight) {
+        CGSize textSize = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
+        
+        return textSize.height + 56 + 44;
+    } else {
+        return 56 + 44 + 10;
+    }
+}
 @end

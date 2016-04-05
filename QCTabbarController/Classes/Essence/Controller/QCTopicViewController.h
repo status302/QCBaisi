@@ -10,4 +10,17 @@
 
 @interface QCTopicViewController : UITableViewController
 
+
+
+typedef enum {
+    QCTopicTypeAll = 1,
+    QCTopicTypePicture = 10,
+    QCTopicTypeWord = 29,
+    QCTopicTypeRecord = 31,
+    QCTopicTypeVedio = 41
+}QCTopicType;
+
+@property (nonatomic, assign) QCTopicType type;
+
+
 @end

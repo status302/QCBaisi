@@ -62,7 +62,7 @@
                                 <state key="highlighted" image="mainCellShareClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugW-nL-ssP" userLabel="踩">
-                                <rect key="frame" x="84.5" y="0.0" width="84.5" height="44"/>
+                                <rect key="frame" x="84" y="0.0" width="84.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="111" image="mainCellCai">
                                     <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-Cg-lGa" userLabel="评论">
-                                <rect key="frame" x="253.5" y="0.0" width="84.5" height="44"/>
+                                <rect key="frame" x="253" y="0.0" width="84.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="11112" image="mainCellComment">
                                     <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -102,19 +102,28 @@
                             <constraint firstItem="jC9-hl-64U" firstAttribute="top" secondItem="aSF-Db-d8a" secondAttribute="top" id="zgA-I2-Pku"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4e-Mo-piq" userLabel="text">
+                        <rect key="frame" x="8" y="56" width="322" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yp3-RU-WjX" firstAttribute="leading" secondItem="bxf-IV-N7u" secondAttribute="trailing" constant="8" id="7K3-YX-0Yi"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="y4e-Mo-piq" secondAttribute="trailing" id="84a-Lx-qJK"/>
                     <constraint firstItem="97O-Kl-of7" firstAttribute="top" secondItem="bxf-IV-N7u" secondAttribute="top" id="KRI-r7-FqE"/>
                     <constraint firstItem="yp3-RU-WjX" firstAttribute="top" secondItem="bxf-IV-N7u" secondAttribute="top" constant="2" id="UJc-Px-OPK"/>
                     <constraint firstItem="aSF-Db-d8a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="XTu-zD-MgC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="aSF-Db-d8a" secondAttribute="trailing" constant="-8" id="afS-jX-l4n"/>
+                    <constraint firstItem="y4e-Mo-piq" firstAttribute="leading" secondItem="bxf-IV-N7u" secondAttribute="leading" id="are-1x-C5t"/>
                     <constraint firstItem="2Uc-if-8Ue" firstAttribute="leading" secondItem="yp3-RU-WjX" secondAttribute="leading" id="b9y-tp-QQE"/>
                     <constraint firstItem="2Uc-if-8Ue" firstAttribute="bottom" secondItem="bxf-IV-N7u" secondAttribute="bottom" id="iFx-EG-5Tf"/>
                     <constraint firstItem="bxf-IV-N7u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="iQD-Jb-Iny"/>
                     <constraint firstAttribute="trailingMargin" secondItem="97O-Kl-of7" secondAttribute="trailing" constant="13" id="r38-XS-S5o"/>
                     <constraint firstAttribute="bottomMargin" secondItem="aSF-Db-d8a" secondAttribute="bottom" constant="-8.5" id="sIl-Oa-Ylv"/>
                     <constraint firstItem="bxf-IV-N7u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="wS5-Ok-SjS"/>
+                    <constraint firstItem="y4e-Mo-piq" firstAttribute="top" secondItem="bxf-IV-N7u" secondAttribute="bottom" constant="8" id="yVa-LY-ooh"/>
                     <constraint firstItem="aSF-Db-d8a" firstAttribute="top" secondItem="2Uc-if-8Ue" secondAttribute="bottom" id="zTb-wG-AYk"/>
                 </constraints>
                 <variation key="default">
@@ -127,6 +136,7 @@
                 <outlet property="caiButton" destination="ugW-nL-ssP" id="jpZ-9h-fyP"/>
                 <outlet property="commentButton" destination="poJ-Cg-lGa" id="Rec-Ak-lRb"/>
                 <outlet property="dingButton" destination="jC9-hl-64U" id="fbO-vb-I1S"/>
+                <outlet property="mainTextLabel" destination="y4e-Mo-piq" id="a2U-d0-QQh"/>
                 <outlet property="passtime_label" destination="2Uc-if-8Ue" id="9on-4g-AoA"/>
                 <outlet property="profile_image_view" destination="bxf-IV-N7u" id="cfJ-nj-znr"/>
                 <outlet property="screen_name_label" destination="yp3-RU-WjX" id="gfP-yr-eQ4"/>

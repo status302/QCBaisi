@@ -42,18 +42,23 @@
 -(void) setupChildVC {
  
     QCTopicViewController *all = [[QCTopicViewController alloc]init];
+    all.type = 1;
     [self addChildViewController:all];
     
     QCTopicViewController *video = [[QCTopicViewController alloc] init];
+    video.type = 41;
     [self addChildViewController:video];
     
     QCTopicViewController *voice = [[QCTopicViewController alloc] init];
+    voice.type = 31;
     [self addChildViewController:voice];
     
     QCTopicViewController *picture = [[QCTopicViewController alloc] init];
+    picture.type = 10;
     [self addChildViewController:picture];
     
     QCTopicViewController *word = [[QCTopicViewController alloc] init];
+    word.type = 29;
     [self addChildViewController:word];
     
 }
