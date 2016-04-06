@@ -13,7 +13,7 @@
 @interface QCTopicPictureView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *gitView;
+@property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
 - (IBAction)seePictureClicked:(id)sender;
 
@@ -25,6 +25,7 @@
 }
 
 - (void)awakeFromNib {
+    
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(seePictureClicked:)];
     [self.pictureImageView addGestureRecognizer:tapGesture];
@@ -33,12 +34,20 @@
 - (void)setTopic:(QCTopic *)topic {
     _topic = topic;
     
-    NSURL *imageURL = [NSURL URLWithString:_topic.image0];
+    NSURL *imageURL = [NSURL URLWithString:_topic.small_image];
     [self.pictureImageView sd_setImageWithPreviousCachedImageWithURL:imageURL placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
+    /**
+     *  判断该图片是否为gif图片
+     */
+    if (!_topic.is_gif) {
+        [self.gifView setHidden:YES];
+    } else {
+        [self.gifView setHidden:NO];
+    }
 }
 /**
  *  在这里显示大图

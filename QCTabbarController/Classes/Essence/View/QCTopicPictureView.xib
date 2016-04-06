@@ -57,7 +57,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="gitView" destination="oGd-Uj-k65" id="5mh-ri-1Ub"/>
+                <outlet property="gifView" destination="oGd-Uj-k65" id="RcW-4b-DVZ"/>
                 <outlet property="pictureImageView" destination="3zY-yV-dj3" id="E7n-nd-kHU"/>
                 <outlet property="seeBigPictureButton" destination="aDg-ea-ABB" id="vez-b2-VVq"/>
             </connections>

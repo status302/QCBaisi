@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mainTextLabel;
 
 @property (weak, nonatomic) QCTopicPictureView *pictureView;
+@property (weak, nonatomic) IBOutlet UIImageView *weiboV;
 
 @end
 
@@ -32,7 +33,9 @@
 
 - (QCTopicPictureView *)pictureView {
     if (!_pictureView) {
-        _pictureView = [QCTopicPictureView pictureView];
+       QCTopicPictureView *pictureView = [QCTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
     }
     return _pictureView;
 }
@@ -41,6 +44,7 @@
     /**
      * 给cell添加背景图片
      */
+    [self.contentView setAutoresizingMask:UIViewAutoresizingNone];
     UIImageView *backImageView = [[UIImageView alloc]init];
     backImageView.image = [UIImage imageNamed:@"mainCellBackground"];
     [self setBackgroundView:backImageView];
@@ -78,12 +82,19 @@
     [self.shareButton setTitle:[self changeTitleWithCount:_topic.repost] forState:UIControlStateNormal];
     [self.commentButton setTitle:[self changeTitleWithCount:_topic.comment] forState:UIControlStateNormal];
     [self.mainTextLabel setText:_topic.text];
-    
+  
+    /**
+     *  判断该用户是否为新浪加V用户
+     */
+    if (!_topic.sina_v) { // 当是新浪V时
+        [self.weiboV setHidden:YES];
+    } else { // 不是新浪V时
+        [self.weiboV setHidden:NO];
+    }
     
     if (_topic.type == QCTopicTypePicture){
         self.pictureView.topic = self.topic;
-        self.pictureView.frame = CGRectMake(self.profile_image_view.x , self.mainTextLabel.y + self.mainTextLabel.height + 5.0, cellWidth, (self.height*cellWidth)/self.topic.width);
-        [self addSubview:self.pictureView];
+        self.pictureView.frame = self.topic.imageFrame; // 设置显示图片的frame
     }
 }
 

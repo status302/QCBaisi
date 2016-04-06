@@ -60,14 +60,32 @@
 /**
  * 小尺寸图片
  */
-@property (copy, nonatomic) NSString *image0;
+@property (copy, nonatomic) NSString *small_image;
 /**
  *  中尺寸图片
  */
-@property (copy, nonatomic) NSString *image1;
+@property (copy, nonatomic) NSString *middle_image;
 /**
  *  大尺寸图片
  */
-@property (copy, nonatomic) NSString *image2;
+@property (copy, nonatomic) NSString *large_image;
+
+@property (nonatomic, assign) NSInteger sina_v;
+
+
+/**
+ *  一些辅助的属性
+ */
+
+@property (nonatomic, assign, readonly, getter=isBigPicture) BOOL bigPicture;
+
+/**
+ *  是否为gif动画
+ */
+
+@property (nonatomic, assign) NSInteger is_gif;
+@property (nonatomic, assign, readonly) CGRect imageFrame;
+
+
 
 @end

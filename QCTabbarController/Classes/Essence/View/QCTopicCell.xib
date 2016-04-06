@@ -108,6 +108,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="t94-Pd-jr0" userLabel="新浪v">
+                        <rect key="frame" x="38" y="38" width="13" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="eAh-jG-axg"/>
+                            <constraint firstAttribute="height" constant="13" id="ttI-3f-7jM"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yp3-RU-WjX" firstAttribute="leading" secondItem="bxf-IV-N7u" secondAttribute="trailing" constant="8" id="7K3-YX-0Yi"/>
@@ -115,11 +122,13 @@
                     <constraint firstItem="97O-Kl-of7" firstAttribute="top" secondItem="bxf-IV-N7u" secondAttribute="top" id="KRI-r7-FqE"/>
                     <constraint firstItem="yp3-RU-WjX" firstAttribute="top" secondItem="bxf-IV-N7u" secondAttribute="top" constant="2" id="UJc-Px-OPK"/>
                     <constraint firstItem="aSF-Db-d8a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="XTu-zD-MgC"/>
+                    <constraint firstItem="t94-Pd-jr0" firstAttribute="bottom" secondItem="bxf-IV-N7u" secondAttribute="bottom" constant="3" id="aKD-ge-SGm"/>
                     <constraint firstAttribute="trailingMargin" secondItem="aSF-Db-d8a" secondAttribute="trailing" constant="-8" id="afS-jX-l4n"/>
                     <constraint firstItem="y4e-Mo-piq" firstAttribute="leading" secondItem="bxf-IV-N7u" secondAttribute="leading" id="are-1x-C5t"/>
                     <constraint firstItem="2Uc-if-8Ue" firstAttribute="leading" secondItem="yp3-RU-WjX" secondAttribute="leading" id="b9y-tp-QQE"/>
                     <constraint firstItem="2Uc-if-8Ue" firstAttribute="bottom" secondItem="bxf-IV-N7u" secondAttribute="bottom" id="iFx-EG-5Tf"/>
                     <constraint firstItem="bxf-IV-N7u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="iQD-Jb-Iny"/>
+                    <constraint firstItem="t94-Pd-jr0" firstAttribute="trailing" secondItem="bxf-IV-N7u" secondAttribute="trailing" constant="3" id="nzM-el-Bkp"/>
                     <constraint firstAttribute="trailingMargin" secondItem="97O-Kl-of7" secondAttribute="trailing" constant="13" id="r38-XS-S5o"/>
                     <constraint firstAttribute="bottomMargin" secondItem="aSF-Db-d8a" secondAttribute="bottom" constant="-8.5" id="sIl-Oa-Ylv"/>
                     <constraint firstItem="bxf-IV-N7u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="wS5-Ok-SjS"/>
@@ -141,11 +150,13 @@
                 <outlet property="profile_image_view" destination="bxf-IV-N7u" id="cfJ-nj-znr"/>
                 <outlet property="screen_name_label" destination="yp3-RU-WjX" id="gfP-yr-eQ4"/>
                 <outlet property="shareButton" destination="BQS-JH-KWR" id="Y7q-ad-gV4"/>
+                <outlet property="weiboV" destination="t94-Pd-jr0" id="Gva-gl-VDh"/>
             </connections>
             <point key="canvasLocation" x="278" y="411"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
         <image name="cellFollowIcon" width="19" height="20"/>
         <image name="mainCellCai" width="20" height="20"/>

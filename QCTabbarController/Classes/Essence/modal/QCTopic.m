@@ -10,8 +10,15 @@
 #import "NSDate+QC.h"
 
 @implementation QCTopic
+{
+    CGRect _imageFrame;
+}
 
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"small_image": @"image0",
+             @"large_image":@"image1",
+             @"middle_image":@"image2"};
+}
 
 /**
  *  处理时间
@@ -54,13 +61,19 @@
     if (!_cellHeight) {
         CGSize textSize = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
         
-        if (self.type == 10) { // 当类型是图片类型的时候cell的高度会增加到图片的高度
-            return textSize.height + 56 + 44 + (self.height*cellWidth)/_width;
+        if (self.type == QCTopicTypePicture) { // 图片类型
+            CGFloat imageHeight = (self.height*cellWidth)/_width;
+            CGFloat imageWidth = cellWidth;
+            CGFloat imageX = topicCellMargin;
+            CGFloat imageY = textSize.height+ topicCellTextY + topicCellMargin;
+            _imageFrame = CGRectMake(imageX, imageY, imageWidth, imageHeight);
+            
+            return textSize.height + topicCellTextY + topicCellBottomHeight + imageHeight;
         } else {
-            return textSize.height + 56 + 44;
+            return textSize.height + topicCellTextY + topicCellBottomHeight;
         }
     } else {
-        return 56 + 44 + 10;
+        return topicCellBottomHeight + topicCellTextY + topicCellMargin;
     }
 }
 @end

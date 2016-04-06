@@ -61,6 +61,8 @@ static NSString * const topicCellId = @"topicCell";
      *  注册nib
      */
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QCTopicCell class]) bundle:nil] forCellReuseIdentifier:topicCellId];
+    
+    [QCTopic mj_replacedKeyFromPropertyName];
 }
 
 /**
