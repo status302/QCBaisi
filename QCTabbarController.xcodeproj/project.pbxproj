@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		724C7BF0D699288BADA904C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA846BE51CB5FF8A7C1CE7 /* libPods.a */; };
 		8630B0011CB39E3800D5460D /* QCTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630B0001CB39E3800D5460D /* QCTopicViewController.m */; };
+		8630B0041CB4B9A000D5460D /* QCTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630B0031CB4B9A000D5460D /* QCTopicPictureView.m */; };
+		8630B0061CB4B9B400D5460D /* QCTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8630B0051CB4B9B400D5460D /* QCTopicPictureView.xib */; };
+		8630B00B1CB4BB8200D5460D /* QCConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630B00A1CB4BB8200D5460D /* QCConstant.m */; };
 		86326FA91C92895A004B26A6 /* QCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */; };
 		86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */; };
 		86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 86326FAC1C92AB7A004B26A6 /* QCRecommendUser.m */; };
@@ -70,6 +73,11 @@
 		7ECA846BE51CB5FF8A7C1CE7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8630AFFF1CB39E3800D5460D /* QCTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTopicViewController.h; sourceTree = "<group>"; };
 		8630B0001CB39E3800D5460D /* QCTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTopicViewController.m; sourceTree = "<group>"; };
+		8630B0021CB4B9A000D5460D /* QCTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTopicPictureView.h; sourceTree = "<group>"; };
+		8630B0031CB4B9A000D5460D /* QCTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTopicPictureView.m; sourceTree = "<group>"; };
+		8630B0051CB4B9B400D5460D /* QCTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCTopicPictureView.xib; sourceTree = "<group>"; };
+		8630B0091CB4BB8200D5460D /* QCConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCConstant.h; sourceTree = "<group>"; };
+		8630B00A1CB4BB8200D5460D /* QCConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCConstant.m; sourceTree = "<group>"; };
 		86326FA61C92895A004B26A6 /* QCRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRecommendUserCell.h; sourceTree = "<group>"; };
 		86326FA71C92895A004B26A6 /* QCRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRecommendUserCell.m; sourceTree = "<group>"; };
 		86326FA81C92895A004B26A6 /* QCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCRecommendUserCell.xib; sourceTree = "<group>"; };
@@ -289,6 +297,9 @@
 				86C11B1C1CAE576200AAC3AC /* QCTopicCell.h */,
 				86C11B1D1CAE576200AAC3AC /* QCTopicCell.m */,
 				86C11B1E1CAE576200AAC3AC /* QCTopicCell.xib */,
+				8630B0021CB4B9A000D5460D /* QCTopicPictureView.h */,
+				8630B0031CB4B9A000D5460D /* QCTopicPictureView.m */,
+				8630B0051CB4B9B400D5460D /* QCTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +434,8 @@
 				865CEFF21C913D9300D9C4A1 /* Controller */,
 				865CEFF51C913D9300D9C4A1 /* modal */,
 				865CEFF61C913D9300D9C4A1 /* View */,
+				8630B0091CB4BB8200D5460D /* QCConstant.h */,
+				8630B00A1CB4BB8200D5460D /* QCConstant.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -578,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				865CF0101C9161BB00D9C4A1 /* QCFriendViewController.xib in Resources */,
+				8630B0061CB4B9B400D5460D /* QCTopicPictureView.xib in Resources */,
 				86DFFECC1C91BF7F005D4FF5 /* QCRecommendCategoryCell.xib in Resources */,
 				86DFFEC21C916DEF005D4FF5 /* QCRecommendViewController.xib in Resources */,
 				86326FAA1C92895A004B26A6 /* QCRecommendUserCell.xib in Resources */,
@@ -673,6 +687,7 @@
 				865CEFFF1C913D9300D9C4A1 /* AppDelegate.m in Sources */,
 				86326FAD1C92AB7A004B26A6 /* QCRecommendUser.m in Sources */,
 				86C11B1F1CAE576200AAC3AC /* QCTopicCell.m in Sources */,
+				8630B0041CB4B9A000D5460D /* QCTopicPictureView.m in Sources */,
 				865CEF8D1C9016F200D9C4A1 /* main.m in Sources */,
 				865CEFFD1C913D9300D9C4A1 /* QCMeViewController.m in Sources */,
 				865CEFFB1C913D9300D9C4A1 /* QCEssenceViewController.m in Sources */,
@@ -682,6 +697,7 @@
 				86C11B1B1CAE54BB00AAC3AC /* QCTopic.m in Sources */,
 				86F514241C94615E006FA510 /* QCVerticalButton.m in Sources */,
 				86BCFBE11C94039A008289BB /* QCRecommendTag.m in Sources */,
+				8630B00B1CB4BB8200D5460D /* QCConstant.m in Sources */,
 				865CF0081C91401D00D9C4A1 /* UIBarButtonItem+QC.m in Sources */,
 				865CF0001C913D9300D9C4A1 /* QCTabbarController.m in Sources */,
 			);

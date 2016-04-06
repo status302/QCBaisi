@@ -9,6 +9,7 @@
 #import "QCTopicCell.h"
 #import "QCTopic.h"
 #import <UIImageView+WebCache.h>
+#import "QCTopicPictureView.h"
 
 @interface QCTopicCell()
 @property (weak, nonatomic) IBOutlet UIButton *dingButton;
@@ -23,9 +24,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *passtime_label;
 @property (weak, nonatomic) IBOutlet UILabel *mainTextLabel;
 
+@property (weak, nonatomic) QCTopicPictureView *pictureView;
+
 @end
 
 @implementation QCTopicCell
+
+- (QCTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        _pictureView = [QCTopicPictureView pictureView];
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     /**
@@ -54,11 +64,12 @@
 - (void)setTopic:(QCTopic *)topic {
     _topic = topic;
     
-    [self.profile_image_view sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:_topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageContinueInBackground progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-    }];
+//    [self.profile_image_view sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:_topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageContinueInBackground progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//        
+//    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//    }];
+    [self.profile_image_view sd_setImageWithURL:[NSURL URLWithString:_topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     [self.screen_name_label setText:_topic.screen_name];
     [self.passtime_label setText:_topic.passtime];
     
@@ -67,6 +78,13 @@
     [self.shareButton setTitle:[self changeTitleWithCount:_topic.repost] forState:UIControlStateNormal];
     [self.commentButton setTitle:[self changeTitleWithCount:_topic.comment] forState:UIControlStateNormal];
     [self.mainTextLabel setText:_topic.text];
+    
+    
+    if (_topic.type == QCTopicTypePicture){
+        self.pictureView.topic = self.topic;
+        self.pictureView.frame = CGRectMake(self.profile_image_view.x , self.mainTextLabel.y + self.mainTextLabel.height + 5.0, cellWidth, (self.height*cellWidth)/self.topic.width);
+        [self addSubview:self.pictureView];
+    }
 }
 
 /**

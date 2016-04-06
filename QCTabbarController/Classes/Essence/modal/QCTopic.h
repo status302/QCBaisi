@@ -45,6 +45,29 @@
  *  cell的高度
  */
 @property (nonatomic, assign) CGFloat cellHeight;
-
+/**
+ *  图片的高度
+ */
+@property (nonatomic, assign) NSInteger height;
+/**
+ *  图片的宽度
+ */
+@property (nonatomic, assign) NSInteger width;
+/**
+ *  帖子的类型
+ */
+@property (nonatomic, assign) QCTopicType type;
+/**
+ * 小尺寸图片
+ */
+@property (copy, nonatomic) NSString *image0;
+/**
+ *  中尺寸图片
+ */
+@property (copy, nonatomic) NSString *image1;
+/**
+ *  大尺寸图片
+ */
+@property (copy, nonatomic) NSString *image2;
 
 @end

@@ -55,7 +55,7 @@ static NSString * const topicCellId = @"topicCell";
     /**
      *  添加上拉刷新控件
      */
-    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
     /**
      *  注册nib
@@ -67,6 +67,8 @@ static NSString * const topicCellId = @"topicCell";
  *  加载新的数据
  */
 - (void )refreshData {
+    // 先将topics数组置空，在执行相应的操作
+    self.topics = nil;
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -77,6 +79,7 @@ static NSString * const topicCellId = @"topicCell";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        NSLog(@"%@", responseObject[@"list"]);
         self.topics = [QCTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         self.maxtime = responseObject[@"info"][@"maxtime"];
         

@@ -45,12 +45,20 @@
         return _passtime;
     }
 }
+
+/**
+ *  根据文字来计算label的高度
+ */
 - (CGFloat)cellHeight {
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 6.0 - 6.0, MAXFLOAT);
+    CGSize maxSize = CGSizeMake(cellWidth, MAXFLOAT);
     if (!_cellHeight) {
         CGSize textSize = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size;
         
-        return textSize.height + 56 + 44;
+        if (self.type == 10) { // 当类型是图片类型的时候cell的高度会增加到图片的高度
+            return textSize.height + 56 + 44 + (self.height*cellWidth)/_width;
+        } else {
+            return textSize.height + 56 + 44;
+        }
     } else {
         return 56 + 44 + 10;
     }
