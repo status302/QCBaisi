@@ -12,6 +12,7 @@
 @implementation QCTopic
 {
     CGRect _imageFrame;
+    BOOL _bigPicture;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
@@ -63,14 +64,22 @@
         
         if (self.type == QCTopicTypePicture) { // 图片类型
             CGFloat imageHeight = (self.height*cellWidth)/_width;
+            
+            if (imageHeight > topicCellMaxPictureHeight) {
+                self.bigPicture = YES;
+                imageHeight = topicCellPictureBreakHeight;
+            }
+            
             CGFloat imageWidth = cellWidth;
             CGFloat imageX = topicCellMargin;
             CGFloat imageY = textSize.height+ topicCellTextY + topicCellMargin;
             _imageFrame = CGRectMake(imageX, imageY, imageWidth, imageHeight);
+
             
-            return textSize.height + topicCellTextY + topicCellBottomHeight + imageHeight;
+            
+            return textSize.height + topicCellTextY + topicCellBottomHeight + imageHeight + topicCellMargin;
         } else {
-            return textSize.height + topicCellTextY + topicCellBottomHeight;
+            return textSize.height + topicCellTextY + topicCellBottomHeight + topicCellMargin;
         }
     } else {
         return topicCellBottomHeight + topicCellTextY + topicCellMargin;

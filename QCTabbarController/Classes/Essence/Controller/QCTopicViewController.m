@@ -81,7 +81,6 @@ static NSString * const topicCellId = @"topicCell";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"%@", responseObject[@"list"]);
         self.topics = [QCTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         self.maxtime = responseObject[@"info"][@"maxtime"];
         

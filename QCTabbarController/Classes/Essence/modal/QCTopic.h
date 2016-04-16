@@ -77,7 +77,7 @@
  *  一些辅助的属性
  */
 
-@property (nonatomic, assign, readonly, getter=isBigPicture) BOOL bigPicture;
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 /**
  *  是否为gif动画

@@ -12,9 +12,11 @@
 
 #define cellWidth [UIScreen mainScreen].bounds.size.width - 16.0
 
-#define topicCellMargin 8.0
+#define topicCellMargin 12.0
 #define topicCellBottomHeight 44.0
 #define topicCellTextY 56.0
+#define topicCellMaxPictureHeight 800.0
+#define topicCellPictureBreakHeight 250.0
 
 typedef enum {
     QCTopicTypeAll = 1,
