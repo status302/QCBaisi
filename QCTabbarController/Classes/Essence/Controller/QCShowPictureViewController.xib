@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QCShowPictureViewController">
             <connections>
-                <outlet property="imageView" destination="S4i-3V-phL" id="uLD-GX-OsM"/>
+                <outlet property="scrollView" destination="cfD-4H-rWz" id="KJM-Bk-o63"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,9 +19,6 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfD-4H-rWz">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </scrollView>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S4i-3V-phL">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ9-d9-gaB" userLabel="back">
                     <rect key="frame" x="20" y="40" width="21" height="22"/>
                     <constraints>
@@ -64,7 +61,6 @@
             <constraints>
                 <constraint firstItem="cfD-4H-rWz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0tY-Kq-p1x"/>
                 <constraint firstItem="cfD-4H-rWz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0uA-el-cYR"/>
-                <constraint firstItem="S4i-3V-phL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0uS-ol-pfO"/>
                 <constraint firstItem="nZ9-d9-gaB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="1AP-7N-yLP"/>
                 <constraint firstAttribute="bottom" secondItem="XLe-X6-bjJ" secondAttribute="bottom" constant="10" id="4ZI-tq-Qnu"/>
                 <constraint firstAttribute="trailing" secondItem="cfD-4H-rWz" secondAttribute="trailing" id="LNk-78-KHe"/>
@@ -72,10 +68,7 @@
                 <constraint firstItem="XLe-X6-bjJ" firstAttribute="leading" secondItem="lzu-16-LQv" secondAttribute="trailing" constant="20" id="eC4-Zr-hgm"/>
                 <constraint firstItem="lzu-16-LQv" firstAttribute="centerY" secondItem="XLe-X6-bjJ" secondAttribute="centerY" id="hup-tz-ogd"/>
                 <constraint firstAttribute="bottom" secondItem="cfD-4H-rWz" secondAttribute="bottom" id="jPP-IH-nrp"/>
-                <constraint firstAttribute="bottom" secondItem="S4i-3V-phL" secondAttribute="bottom" id="mEI-de-JPI"/>
                 <constraint firstItem="nZ9-d9-gaB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="rki-j3-550"/>
-                <constraint firstItem="S4i-3V-phL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uPM-yH-iKa"/>
-                <constraint firstAttribute="trailing" secondItem="S4i-3V-phL" secondAttribute="trailing" id="z52-zb-X7V"/>
             </constraints>
             <point key="canvasLocation" x="220" y="292"/>
         </view>

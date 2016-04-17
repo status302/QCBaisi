@@ -13,7 +13,7 @@
 
 @interface QCShowPictureViewController ()
 - (IBAction)back:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) UIImageView *imageView;
 - (IBAction)save:(id)sender;
 
 @end
@@ -23,11 +23,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *url = [NSURL URLWithString:_topic.large_image];
-    [self.imageView sd_setImageWithURL:url];
+    UIImageView *imageView = [[UIImageView alloc]init];
+    [self.scrollView addSubview:imageView];
+    imageView.userInteractionEnabled = YES;
     
+    self.imageView = imageView;
+    CGFloat imageW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat imageH = imageW * self.topic.height / self.topic.width;
+    if (imageH > [UIScreen mainScreen].bounds.size.height) {
+        _scrollView.contentSize = CGSizeMake(0, imageH);
+        imageView.frame = CGRectMake(0, 0, imageW, imageH);
+    } else {
+        imageView.size = CGSizeMake(imageW, imageH);
+        imageView.centerY = [UIScreen mainScreen].bounds.size.height * 0.5;
+    }
+    
+    NSURL *url = [NSURL URLWithString:_topic.large_image];
+    [imageView sd_setImageWithURL:url];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(back:)];
     [self.imageView addGestureRecognizer:tapGesture];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
