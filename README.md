@@ -10,6 +10,8 @@
 'MJExtension', '~> 3.0.10'
 'MJRefresh', '~> 3.1.0' 
 ```
+运行前请先`Pod install --no-repo-update`
+
 ##### 目前的进程：  
 - 主页
 - 最新
