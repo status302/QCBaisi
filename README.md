@@ -24,6 +24,12 @@
 - 推荐标签
 - 主页的文字和图片两栏（图片显示有时候会不正常，待修复）
 
+![主页](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-0.png)
+![文字](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-1.png)
+![图片](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-2.png)
+![推荐关注](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-5.png)
+![登录与注册](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-4.png)
+![推荐标签](http://7xk67j.com1.z0.glb.clouddn.com/QQ20160419-3.png)
 
 ##### 感谢
 - [百思不得姐接口地址](https://www.showapi.com/api/lookPoint/255)
