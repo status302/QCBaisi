@@ -19,6 +19,8 @@
 
 @property (strong, nonatomic) NSMutableArray *topics;
 @property (copy, nonatomic) NSString* maxtime;
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger page;
 
 @property (strong, nonatomic) NSMutableArray *moreTopics;
 
@@ -96,10 +98,16 @@ static NSString * const topicCellId = @"topicCell";
  *  加载更多的数据
  */
 - (void) loadMoreData {
+    
+    [self.tableView.mj_header endRefreshing];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
+    NSInteger page = self.page + 1;
+    params[@"page"] = @(page);
+    params[@"maxtime"] = self.maxtime;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -111,6 +119,7 @@ static NSString * const topicCellId = @"topicCell";
         [self.tableView reloadData];
         
         [self.tableView.mj_footer endRefreshing];
+        self.page = page;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_footer endRefreshing];

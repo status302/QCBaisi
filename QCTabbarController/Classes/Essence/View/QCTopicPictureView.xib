@@ -36,15 +36,25 @@
                         <constraint firstAttribute="width" constant="31" id="atI-JD-vzN"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8D-3M-2Bi" userLabel="progress view" customClass="QCProgressView">
+                    <rect key="frame" x="155" y="85" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="EcD-hy-jRC"/>
+                        <constraint firstAttribute="height" constant="60" id="LoK-2r-bfY"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="aDg-ea-ABB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="00e-gK-1uN"/>
+                <constraint firstItem="a8D-3M-2Bi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1Hv-G6-1h0"/>
                 <constraint firstItem="Wsu-uI-fug" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="2nW-Jf-KUJ"/>
                 <constraint firstAttribute="trailing" secondItem="3zY-yV-dj3" secondAttribute="trailing" id="7Ow-yQ-ssW"/>
                 <constraint firstAttribute="bottom" secondItem="aDg-ea-ABB" secondAttribute="bottom" id="DaN-PV-VXV"/>
                 <constraint firstAttribute="trailing" secondItem="aDg-ea-ABB" secondAttribute="trailing" id="HKB-hr-56Z"/>
                 <constraint firstItem="oGd-Uj-k65" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZhK-g2-ihh"/>
+                <constraint firstItem="a8D-3M-2Bi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aYu-Yz-ahg"/>
                 <constraint firstItem="3zY-yV-dj3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="c71-Od-6gm"/>
                 <constraint firstAttribute="trailing" secondItem="Wsu-uI-fug" secondAttribute="trailing" constant="8" id="j0i-UV-3cj"/>
                 <constraint firstItem="3zY-yV-dj3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ld4-EC-84I"/>
@@ -56,9 +66,10 @@
             <connections>
                 <outlet property="gifView" destination="oGd-Uj-k65" id="RcW-4b-DVZ"/>
                 <outlet property="pictureImageView" destination="3zY-yV-dj3" id="E7n-nd-kHU"/>
+                <outlet property="progressView" destination="a8D-3M-2Bi" id="Gi2-mo-L3M"/>
                 <outlet property="seeBigPictureButton" destination="aDg-ea-ABB" id="vez-b2-VVq"/>
             </connections>
-            <point key="canvasLocation" x="399.5" y="289"/>
+            <point key="canvasLocation" x="259.5" y="271"/>
         </view>
     </objects>
     <resources>

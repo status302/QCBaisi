@@ -49,7 +49,6 @@
     backImageView.image = [UIImage imageNamed:@"mainCellBackground"];
     [self setBackgroundView:backImageView];
     
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

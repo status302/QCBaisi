@@ -10,12 +10,15 @@
 #import "QCTopic.h"
 #import "QCShowPictureViewController.h"
 #import <UIImageView+WebCache.h>
+#import "QCProgressView.h"
 
 @interface QCTopicPictureView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
+
+@property (weak, nonatomic) IBOutlet QCProgressView *progressView;
 
 @end
 @implementation QCTopicPictureView
@@ -25,6 +28,7 @@
 }
 
 - (void)awakeFromNib {
+    _pictureImageView.backgroundColor = [UIColor colorWithWhite:0.6 alpha:1.0];
     
     self.autoresizingMask = UIViewAutoresizingNone;
     
@@ -44,11 +48,18 @@
 - (void)setTopic:(QCTopic *)topic {
     _topic = topic;
     
+    [self.progressView setProgress:_topic.currentProgress animated:NO];
+    
     NSURL *imageURL = [NSURL URLWithString:_topic.small_image];
     [self.pictureImageView sd_setImageWithPreviousCachedImageWithURL:imageURL placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = NO;
+        _topic.currentProgress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:_topic.currentProgress animated:NO];
         
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
     }];
     /**
      *  判断该图片是否为gif图片

@@ -84,8 +84,10 @@
  */
 
 @property (nonatomic, assign) NSInteger is_gif;
+
 @property (nonatomic, assign, readonly) CGRect imageFrame;
 
+@property (nonatomic, assign) CGFloat currentProgress;
 
 
 @end
