@@ -31,6 +31,8 @@
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     
     NSDate *createTime = [formatter dateFromString:_passtime];
+
+    NSLog(@"%@", _passtime);
     
     if ([createTime isThisYear]) { // 今年
         if ([createTime isToday]) { // 今天

@@ -96,10 +96,10 @@
     CGFloat y = 0.0;
     for (NSInteger i=0; i<buttonsArray.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//        button.tag = i*1000;
+        //        button.tag = i*1000;
         [button setTag:i * 1000];
         button.frame = CGRectMake(width*i, y, width, height);
-        
+
         [button setTitle:buttonsArray[i] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:15];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
