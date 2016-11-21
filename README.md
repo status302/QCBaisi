@@ -37,8 +37,8 @@
 - 各个开源框架的作者们
 
 ##### 关于我
-一名来自大三的iOS初学者，目前在找实习。  
-也欢迎给我实习机会，如果项目中有什么需要改进的地方，请直接跟我联系或者pull request。  
+一名来自大四的iOS初级开发者，目前在找工作。[我的简历](http://qiuncheng.com/resume.html)  
+也欢迎给我提供工作机会，如果项目中有什么需要改进的地方，请直接跟我联系或者pull request。  
 Email：<a href = "mailTo: qiuncheng@gmail.com&subject=关于你仿写的《百思不得姐》我想和你谈谈">qiuncheng@gmail.com</a>
 博客： [qiuncheng.com](http://qiuncheng.com)
 
